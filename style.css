@@ -30,7 +30,7 @@ h2, .logo { background: var(--gold-grad); -webkit-background-clip: text; backgro
 .nav nav a:hover { color: var(--gold-light); }
 
 .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.5rem 1rem 3.5rem; }
-.hero-logo { width: min(480px, 88%); height: auto; /* fades the picture's dark edges into the page */ -webkit-mask-image: radial-gradient(ellipse at 50% 48%, #000 60%, transparent 98%); mask-image: radial-gradient(ellipse at 50% 48%, #000 60%, transparent 98%); }
+.hero-logo { width: min(300px, 70%); height: auto; /* fades the picture's dark edges into the page */ -webkit-mask-image: radial-gradient(ellipse at 50% 48%, #000 60%, transparent 98%); mask-image: radial-gradient(ellipse at 50% 48%, #000 60%, transparent 98%); }
 .hero-content p { margin: 0.5rem 0 1.75rem; color: var(--muted); letter-spacing: 0.12em; font-size: 0.9rem; text-transform: uppercase; max-width: 800px; }
 .hero-buttons { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
 
