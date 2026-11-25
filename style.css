@@ -469,3 +469,78 @@ dialog h2 { margin-top: 0; font-size: 2.2rem; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ===================================================== */
+/* ===== SEARCH ======================================== */
+/* ===================================================== */
+.search-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--bronze);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.search-toggle:hover,
+.search-toggle[aria-expanded="true"] { background: var(--gold-grad); color: #1a1006; }
+.search-toggle svg { width: 1.4rem; height: 1.4rem; }
+
+.search-panel {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: min(92%, 640px);
+  margin: 1.25rem auto 0;
+}
+.search-panel[hidden] { display: none; }
+.search-panel input {
+  flex: 1;
+  min-width: 0;
+  height: 3.4rem;
+  padding: 0 3.2rem 0 1.4rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 1rem;                 /* 16px+ stops iPhones zooming in */
+}
+.search-panel input::placeholder { color: var(--muted); }
+.search-clear {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.25rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  background: transparent;
+  color: var(--gold-light);
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.search-status {
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* Hide products / sections that don't match (needed because .item uses display:flex) */
+.item[hidden] { display: none; }
+.category.no-results { display: none; }
+
+@media (max-width: 700px) {
+  .search-panel { margin-top: 1rem; }
+}
