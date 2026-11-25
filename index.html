@@ -13,7 +13,6 @@
 <body>
 
 <div class="topbar">★ CARDS FOR EVERY OCCASION ★ COUNTRYWIDE DELIVERY ON STANDBY ★ DM TO ORDER ★</div>
-
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <header class="nav">
@@ -24,7 +23,20 @@
       <a href="#adult-section">ADULT 18+</a>
       <a class="order-link" href="#">GET IN TOUCH</a>
     </nav>
+    <button type="button" class="search-toggle" id="search-toggle" aria-label="Search games" aria-expanded="false" aria-controls="search-panel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
+      </svg>
+    </button>
   </header>
+
+  <div class="search-panel" id="search-panel" hidden>
+    <label class="sr-only" for="search-input">Search games</label>
+    <input type="search" id="search-input" placeholder="Search games, e.g. UNO, Monopoly…" autocomplete="off">
+    <button type="button" class="search-clear" id="search-clear" aria-label="Clear search">✕</button>
+    <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
+  </div>
+
   <div class="hero-content">
     <h1 class="sr-only">House Of Cards</h1>
     <img class="hero-logo" src="https://i.ibb.co/8HjRSLM/6628381c-92f1-454b-a6cb-e8f55bfca3af.webp" alt="House Of Cards - Cards for every occasion">
