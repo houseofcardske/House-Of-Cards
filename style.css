@@ -252,14 +252,12 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; }
 .item-text .desc { margin: 0 0 1.5rem; font-size: 0.95rem; color: var(--muted); flex: 1; }
 .item-text .pill { align-self: flex-start; }
 
-/* Pictures: same square shape for every product */
+/* Pictures: shown whole (never cropped), kept small */
 .item img {
-  flex: 0 0 42%;
-  width: 42%;
-  max-width: 400px;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;               /* change to "contain" if you don't want any cropping */
+  flex: 0 0 34%;
+  width: 34%;
+  max-width: 280px;
+  height: auto;                    /* keeps the photo's own shape, nothing cut off */
   align-self: flex-start;
   border-radius: 40px 6px 6px 6px;
   border: 1px solid var(--bronze);
@@ -385,7 +383,7 @@ dialog h2 { margin-top: 0; font-size: 2.2rem; }
   .items { grid-template-columns: 1fr; }
   .item:nth-child(odd) { border-right: 0; }
   .item { padding: 1.75rem 1rem; }
-  .item img { flex: 0 0 40%; width: 40%; }
+  .item img { flex: 0 0 32%; width: 32%; max-width: 260px; }
   .item-text h3 { font-size: 2.1rem; }
 
   .category h2, .banner h2 { font-size: 2.6rem; }
