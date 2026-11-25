@@ -854,7 +854,6 @@
         </div>
         <img src="https://i.ibb.co/hxTQ0bmZ/Gemini-Generated-Image-tdd0p1tdd0p1tdd0.jpg" alt="BAD CHOICES" loading="lazy">
       </article>
-      </article>
       <article class="item">
         <div class="item-text">
           <h3>YOU LAUGH YOU DRINK</h3>
@@ -907,9 +906,8 @@
 </dialog>
 
 <script>
-  // Put your WhatsApp number here in international format, e.g. "2547XXXXXXXX".
-  // While it is empty, the buttons open WhatsApp and let the customer choose a contact.
-  const WHATSAPP_NUMBER = "";
+  // WhatsApp number in international format (no +, no spaces, no leading 0).
+  const WHATSAPP_NUMBER = "254717706729";
 
   const waBase = "https://wa.me/" + WHATSAPP_NUMBER + "?text=";
   document.querySelectorAll("a.order").forEach(a => {
@@ -942,7 +940,66 @@
     dialog.close();
   });
   document.getElementById("confirm-no").addEventListener("click", () => dialog.close());
-</script>
 
-</body>
-</html>
+  // ===== Search =====
+  const searchToggle = document.getElementById("search-toggle");
+  const searchPanel  = document.getElementById("search-panel");
+  const searchInput  = document.getElementById("search-input");
+  const searchClear  = document.getElementById("search-clear");
+  const searchStatus = document.getElementById("search-status");
+  const allItems     = document.querySelectorAll(".item");
+  const allSections  = document.querySelectorAll(".category");
+
+  function runSearch() {
+    const q = searchInput.value.trim().toLowerCase();
+    const adultLocked = section.classList.contains("locked");
+    let shown = 0;
+
+    allItems.forEach(item => {
+      const inAdult = item.closest("#adult-section");
+      const text = (item.querySelector("h3").textContent + " " +
+                    item.querySelector(".desc").textContent).toLowerCase();
+      // adult games stay out of the results until the visitor confirms 18+
+      const match = !q || (text.includes(q) && !(inAdult && adultLocked));
+      item.hidden = !match;
+      if (match && q) shown++;
+    });
+
+    allSections.forEach(cat => {
+      const visible = cat.querySelectorAll(".item:not([hidden])").length;
+      cat.classList.toggle("no-results", q !== "" && visible === 0);
+    });
+
+    if (!q) searchStatus.textContent = "";
+    else if (shown === 0) searchStatus.textContent = "No games found. Try another name, or ask us on WhatsApp.";
+    else searchStatus.textContent = shown + (shown === 1 ? " game found" : " games found");
+  }
+
+  function closeSearch() {
+    searchInput.value = "";
+    runSearch();
+    searchPanel.hidden = true;
+    searchToggle.setAttribute("aria-expanded", "false");
+    searchToggle.focus();
+  }
+
+  searchToggle.addEventListener("click", () => {
+    if (searchPanel.hidden) {
+      searchPanel.hidden = false;
+      searchToggle.setAttribute("aria-expanded", "true");
+      searchInput.focus();
+    } else {
+      closeSearch();
+    }
+  });
+
+  searchInput.addEventListener("input", runSearch);
+  searchInput.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeSearch();
+    if (e.key === "Enter") {
+      const first = document.querySelector(".item:not([hidden])");
+      if (first && searchInput.value.trim()) first.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+  searchClear.addEventListener("click", () => { searchInput.value = ""; runSearch(); searchInput.focus(); });
+</script>
