@@ -12,7 +12,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 body {
   margin: 0;
@@ -20,8 +20,10 @@ body {
   color: var(--text);
   background: var(--black);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
 
 h1, h2, h3, h4, .logo {
   font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
@@ -46,22 +48,29 @@ h2, .logo {
   white-space: nowrap;
 }
 
-/* ===== Gold pill buttons (same height for <a> and <button>) ===== */
+/* Visible keyboard focus for everyone using Tab */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+/* ===== Gold pill buttons (same size for <a> and <button>) ===== */
 .pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  line-height: 1;
-  min-height: 3.2rem;
-  min-width: 11rem;
-  padding: 0 2rem;
+  line-height: 1.1;
+  min-height: 3.8rem;
+  min-width: 14rem;
+  max-width: 100%;
+  padding: 0.5rem 2.5rem;
   background: var(--gold-grad);
   color: #1a1006;
   border: 0;
   border-radius: 999px;
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.1em;
   cursor: pointer;
   box-shadow: 0 0 0 1px #f3d28a55 inset, 0 4px 14px rgba(240, 163, 28, 0.2);
@@ -116,6 +125,7 @@ h2, .logo {
   letter-spacing: 0.14em;
   color: var(--muted);
 }
+.nav nav a { padding: 0.5rem 0; }
 .nav nav a:hover { color: var(--gold-light); }
 
 .hero-content {
@@ -200,6 +210,7 @@ h2, .logo {
   display: block;
   width: 100%;
   max-width: 400px;
+  height: auto;
   margin: 0 auto 1.25rem;
   border-radius: 40px 6px 6px 6px;
   border: 1px solid var(--bronze);
@@ -213,7 +224,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; }
 .subtitle { margin: 0 0 0.5rem; text-align: center; color: var(--amber); font-size: 1.4rem; }
 .intro { max-width: 760px; margin: 0 auto 2rem; text-align: center; color: var(--muted); }
 
-/* 2 games per line, text left + picture right */
+/* Desktop: 2 games per line, text left + picture right */
 .items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -222,7 +233,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; }
 .item {
   display: flex;
   gap: 1.25rem;
-  align-items: stretch;            /* lets the text column fill the card height */
+  align-items: stretch;            /* text column fills the card height */
   justify-content: space-between;
   padding: 2rem 1.5rem;
   border-bottom: 1px solid var(--line);
@@ -236,19 +247,19 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; }
   display: flex;
   flex-direction: column;
 }
-.item-text h3 { margin: 0 0 0.4rem; font-size: 2rem; line-height: 1.1; color: var(--gold-light); }
+.item-text h3 { margin: 0 0 0.4rem; font-size: 2rem; line-height: 1.1; color: var(--gold-light); overflow-wrap: anywhere; }
 .item-text .price { margin: 0 0 0.75rem; font-size: 1.1rem; font-weight: 600; color: var(--amber); }
-.item-text .desc { margin: 0 0 1.5rem; font-size: 0.88rem; color: var(--muted); flex: 1; }
+.item-text .desc { margin: 0 0 1.5rem; font-size: 0.95rem; color: var(--muted); flex: 1; }
 .item-text .pill { align-self: flex-start; }
 
 /* Pictures: same square shape for every product */
 .item img {
   flex: 0 0 42%;
   width: 42%;
-  max-width: 400px;                /* pictures never bigger than 400px */
+  max-width: 400px;
   height: auto;
   aspect-ratio: 1 / 1;
-  object-fit: cover;               /* use "contain" if you don't want any cropping */
+  object-fit: cover;               /* change to "contain" if you don't want any cropping */
   align-self: flex-start;
   border-radius: 40px 6px 6px 6px;
   border: 1px solid var(--bronze);
@@ -305,9 +316,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; }
 /* ===== Floating buttons ===== */
 .wa-float {
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
   z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 3rem;
   background: #25d366;
   color: #fff;
   font-family: system-ui, sans-serif;
@@ -319,8 +334,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; }
 }
 .to-top {
   position: fixed;
-  left: 1rem;
-  bottom: 1rem;
+  left: max(1rem, env(safe-area-inset-left));
+  bottom: max(1rem, env(safe-area-inset-bottom));
   z-index: 30;
   width: 3rem;
   height: 3rem;
@@ -340,7 +355,7 @@ dialog {
   border: 1px solid var(--gold);
   border-radius: 18px;
   padding: 1.75rem;
-  max-width: 360px;
+  width: min(92vw, 380px);
   text-align: center;
   background: var(--panel);
   color: var(--text);
@@ -348,19 +363,61 @@ dialog {
 }
 dialog::backdrop { background: rgba(0, 0, 0, 0.8); }
 dialog h2 { margin-top: 0; font-size: 2.2rem; }
-.dialog-actions { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.25rem; }
+.dialog-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
+.dialog-actions .pill { min-width: 9rem; }
 
-/* ===== Tablets / phones ===== */
+/* ===================================================== */
+/* ===== LARGE SCREENS (wide monitors)  1400px+ ======== */
+/* ===================================================== */
+@media (min-width: 1400px) {
+  main, .who { max-width: 1320px; }
+  .item-text .desc { font-size: 1rem; }
+}
+
+/* ===================================================== */
+/* ===== TABLETS (landscape + portrait)  up to 1024px == */
+/* ===================================================== */
+@media (max-width: 1024px) {
+  .nav { padding: 1rem 1.5rem; }
+  .pill { min-height: 3.4rem; min-width: 12rem; font-size: 1.35rem; padding: 0.5rem 2rem; }
+
+  /* one game per line, text left + picture right (more room to read) */
+  .items { grid-template-columns: 1fr; }
+  .item:nth-child(odd) { border-right: 0; }
+  .item { padding: 1.75rem 1rem; }
+  .item img { flex: 0 0 40%; width: 40%; }
+  .item-text h3 { font-size: 2.1rem; }
+
+  .category h2, .banner h2 { font-size: 2.6rem; }
+  .site-footer h2 { font-size: 2.3rem; }
+}
+
 @media (max-width: 900px) {
   .who { grid-template-columns: 1fr 1fr; }
   .who-text { grid-column: 1 / -1; }
   .who-col:nth-child(3) { border-left: 0; padding-left: 0; }
-  .nav { padding: 1rem 1.25rem; justify-content: center; }
+  .nav { justify-content: center; }
   .nav nav { gap: 1.1rem; justify-content: center; }
 }
 
+/* ===================================================== */
+/* ===== PHONES  up to 700px =========================== */
+/* ===================================================== */
 @media (max-width: 700px) {
-  /* still 2 games per line: picture on top, text underneath */
+  .topbar { font-size: 0.65rem; letter-spacing: 0.06em; }
+
+  .hero-buttons { flex-direction: column; align-items: stretch; width: 100%; max-width: 360px; }
+  .hero-buttons .pill { width: 100%; }
+
+  .who { grid-template-columns: 1fr; padding: 2.5rem 1rem; }
+  .who-col:nth-child(3) { border-left: 0; padding-left: 0; }
+  .who-col .pill { width: 100%; max-width: 360px; }
+
+  main { padding: 0 0.6rem 2rem; }
+
+  /* two games per line: picture on top, text underneath */
+  .items { grid-template-columns: repeat(2, 1fr); }
+  .item:nth-child(odd) { border-right: 1px solid var(--line); }
   .item { flex-direction: column-reverse; align-items: stretch; padding: 0.9rem 0.6rem; gap: 0.7rem; }
   .item img {
     flex: none;
@@ -370,13 +427,47 @@ dialog h2 { margin-top: 0; font-size: 2.2rem; }
     align-self: center;
     border-radius: 22px 4px 4px 4px;
   }
-  .item-text h3 { font-size: 1.25rem; }
-  .item-text .price { font-size: 0.85rem; margin-bottom: 0.4rem; }
-  .item-text .desc { font-size: 0.7rem; line-height: 1.5; margin-bottom: 0.8rem; }
-  .item-text .pill { min-height: 2.4rem; min-width: 0; padding: 0 1rem; font-size: 0.95rem; }
+  .item-text h3 { font-size: 1.3rem; }
+  .item-text .price { font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .item-text .desc { font-size: 0.75rem; line-height: 1.5; margin-bottom: 0.8rem; }
+
+  /* Order Now: full width of the card, easy to tap (44px+) */
+  .item-text .pill {
+    align-self: stretch;
+    width: 100%;
+    min-width: 0;
+    min-height: 3rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.15rem;
+  }
+
+  .banner .pill, .site-footer .pill { width: 100%; max-width: 360px; }
+  .pill { min-width: 0; }
+
   .category h2 { font-size: 2.1rem; }
+  .intro { font-size: 0.9rem; }
   .features { font-size: 0.8rem; gap: 0.4rem 1.5rem; }
   .age-gate { top: 4rem; }
-  .wa-float span { display: none; }
   .banner h2, .site-footer h2 { font-size: 2.1rem; }
+
+  /* WhatsApp button becomes a round icon on phones */
+  .wa-float { width: 3.4rem; height: 3.4rem; padding: 0; justify-content: center; font-size: 1.5rem; }
+  .wa-float span { display: none; }
+}
+
+/* ===================================================== */
+/* ===== SMALL PHONES  up to 380px ===================== */
+/* ===================================================== */
+@media (max-width: 380px) {
+  .nav nav { gap: 0.6rem 0.9rem; font-size: 0.72rem; }
+  .logo { font-size: 1.6rem; }
+  .item-text h3 { font-size: 1.1rem; }
+  .item-text .desc { font-size: 0.7rem; }
+  .item-text .pill { font-size: 1.05rem; }
+}
+
+/* ===== Respect people who turn off animations ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
 }
