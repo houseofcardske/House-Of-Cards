@@ -260,7 +260,7 @@ const I = "https://i.ibb.co/";
 //   2) the gold poster  -> images/<game-name>-poster.<ext>, or the ImgBB link below if that file is missing
 // While SITE.usePhotos is false, only the poster shows.
 const slug = (s) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const full = (u) => /^https?:\/\//.test(u) ? u : I + u;   // accepts a full link or the short "id/file" form
+const full = (u) => /^(https?:)?\/\//.test(u) || /^(20HOC|images)\//.test(u) ? u : I + u;
 const pick = (old, nw) => (SITE.newPictures && nw) ? (/^https?:\/\//.test(nw) ? nw : SITE.newHost + nw) : full(old);
 const mk = (cat) => (name, price, img, desc, newImg) => {
   const src = pick(img, newImg);                 // img = picture that works now, newImg = your new picture (optional)
