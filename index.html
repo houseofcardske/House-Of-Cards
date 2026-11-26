@@ -29,7 +29,6 @@ h2,.logo{background:var(--gold-grad);-webkit-background-clip:text;background-cli
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
 
-/* Gold pill buttons (same look for links and buttons) */
 .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.1;min-height:3rem;
   padding:.4rem 1.8rem;background:var(--gold-grad);color:#1a1006;border:0;border-radius:999px;font-size:1.3rem;letter-spacing:.1em;
   cursor:pointer;box-shadow:0 0 0 1px #f3d28a55 inset,0 4px 14px rgba(240,163,28,.2);transition:filter .2s,transform .2s}
@@ -38,7 +37,6 @@ h2,.logo{background:var(--gold-grad);-webkit-background-clip:text;background-cli
 
 .topbar{background:#150e06;color:var(--gold-light);border-bottom:1px solid var(--line);text-align:center;font-weight:600;font-size:.75rem;letter-spacing:.12em;padding:.6rem .75rem;text-transform:uppercase}
 
-/* Hero */
 .hero{background:radial-gradient(ellipse at 50% 35%,rgba(240,163,28,.16),transparent 55%),var(--black)}
 .nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem 2rem;padding:1rem max(1rem,4vw);border-bottom:1px solid var(--line)}
 .logo{font-size:2rem;letter-spacing:.1em;line-height:1}
@@ -53,11 +51,9 @@ h2,.logo{background:var(--gold-grad);-webkit-background-clip:text;background-cli
 .features{background:linear-gradient(#2a1b0a,#120b04);border-block:1px solid var(--line);color:var(--gold-light);display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem 3rem;padding:1rem;font-size:.9rem;font-weight:600}
 .features i{color:var(--amber);font-style:normal;font-size:1.3rem;margin-right:.35rem;vertical-align:middle}
 
-/* Sticky browse bar */
 .tools{position:sticky;top:0;z-index:10;background:rgba(10,10,11,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
-  padding:.7rem max(1rem,4vw);display:flex;flex-wrap:wrap;gap:.6rem 1rem;justify-content:space-between}
+  padding:.7rem max(1rem,4vw);display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;justify-content:space-between}
 .chips,.find{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-.tools{align-items:center}
 .chip{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:.45em 1.1em;font:500 .9rem Montserrat,sans-serif;cursor:pointer;transition:border-color .2s}
 .chip:hover{border-color:var(--gold)}
 .chip.on{background:var(--gold-grad);border-color:var(--gold);color:#1a1006;font-weight:600}
@@ -70,7 +66,6 @@ main{max-width:1320px;margin:0 auto;padding:1.5rem max(1rem,3vw) 3rem}
 .empty{text-align:center;color:var(--muted);padding:3rem 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;align-items:stretch}
 
-/* Product cards: suit pip and price in the corner, like a playing card */
 .card{background:var(--panel);border:1px solid var(--line);border-radius:18px 6px 6px 6px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
 .card:hover{border-color:var(--gold)}
 .corner{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem 0}
@@ -78,18 +73,22 @@ main{max-width:1320px;margin:0 auto;padding:1.5rem max(1rem,3vw) 3rem}
 .price{color:var(--gold-light);font-size:1.6rem;line-height:1}
 .gal{margin-top:.6rem;background:#070708;border-block:1px solid var(--line)}
 .gal img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
-.noimg{margin-top:.6rem;width:100%;aspect-ratio:1;background:#070708;border-block:1px solid var(--line)}
-.noimg{display:grid;place-items:center;font-size:4rem;color:var(--line)}
+.noimg{margin-top:.6rem;width:100%;aspect-ratio:1;background:#070708;border-block:1px solid var(--line);display:grid;place-items:center;font-size:4rem;color:var(--line)}
 .body{padding:1rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
 .card h3{font-size:1.7rem;line-height:1.1;color:var(--gold-light);overflow-wrap:anywhere}
-.meta{color:var(--amber);font-size:.85rem;font-weight:600}
 .desc{color:var(--muted);font-size:.92rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card.open .desc{display:block}
 .more{align-self:flex-start;background:none;border:0;color:var(--gold-light);font:500 .85rem Montserrat,sans-serif;text-decoration:underline;cursor:pointer;padding:.2rem 0}
 .body .btn{margin-top:auto;font-size:1.15rem;padding:.4rem 1rem}
-.more+.btn{margin-top:auto}
 
-/* How ordering works */
+.cat+.cat{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--line)}
+.cat-head{text-align:center;max-width:760px;margin:0 auto 1.75rem}
+.cat-head .suit{display:block;color:var(--amber);font-size:1.6rem;line-height:1}
+.cat-head h2{font-size:3rem;line-height:1.1;margin:.3rem 0 .5rem}
+.cat-head p{color:var(--muted);font-size:.95rem}
+.gate{max-width:380px;margin:0 auto;background:var(--panel);border:1px solid var(--gold);border-radius:18px;padding:1.5rem;text-align:center}
+.gate p{margin-bottom:1rem;color:var(--gold-light);font-weight:600}
+
 .how{max-width:720px;margin:0 auto;padding:3rem 1.25rem;border-top:1px solid var(--line)}
 .how h2{font-size:2.6rem;margin-bottom:.5rem}
 .how ol{padding-left:1.3rem;display:grid;gap:.3rem;color:var(--muted)}
@@ -103,7 +102,6 @@ main{max-width:1320px;margin:0 auto;padding:1.5rem max(1rem,3vw) 3rem}
 .site-footer h2{font-size:2.4rem;margin-bottom:1.25rem}
 .site-footer p{margin-top:2rem;color:#8a8070;font-size:.8rem}
 
-/* Floating buttons */
 .wa-float,.to-top{position:fixed;bottom:max(1rem,env(safe-area-inset-bottom));z-index:30;box-shadow:0 4px 14px rgba(0,0,0,.5)}
 .wa-float{right:max(1rem,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:.4rem;min-height:3rem;background:#25d366;color:#fff;font:600 1rem system-ui,sans-serif;padding:.7rem 1.3rem;border-radius:999px}
 .to-top{left:max(1rem,env(safe-area-inset-left));width:3rem;height:3rem;background:var(--gold-grad);color:#1a1006;font:700 1.5rem/3rem system-ui,sans-serif;text-align:center;border-radius:50%}
@@ -128,28 +126,13 @@ dialog p{color:var(--muted);margin:.4rem 0 1.2rem}
   .body .btn{font-size:1.05rem;min-height:2.8rem}
   .find,input{width:100%}
   .banner h2,.site-footer h2{font-size:2.1rem}
+  .cat-head h2{font-size:2.2rem}
+  .cat-head p{font-size:.88rem}
   .wa-float{width:3.4rem;height:3.4rem;padding:0;justify-content:center;font-size:1.5rem}
   .wa-float span{display:none}
 }
 @media (max-width:360px){.grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-
-/* Two-picture switch under each product image */
-.tabs{display:flex;gap:.4rem;justify-content:center;padding:.5rem .5rem .6rem;background:var(--panel);border-top:1px solid var(--line)}
-.tabs[hidden]{display:none}
-.tab{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.25em .9em;font:500 .8rem Montserrat,sans-serif;cursor:pointer}
-.tab.on{background:var(--gold-grad);color:#1a1006;border-color:var(--gold);font-weight:600}
-
-/* Separate sections: card games, board games, adult games */
-.cat+.cat{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--line)}
-.cat-head{text-align:center;max-width:760px;margin:0 auto 1.75rem}
-.cat-head .suit{display:block;color:var(--amber);font-size:1.6rem;line-height:1}
-.cat-head h2{font-size:3rem;line-height:1.1;margin:.3rem 0 .5rem}
-.cat-head p{color:var(--muted);font-size:.95rem}
-.gate{max-width:380px;margin:0 auto;background:var(--panel);border:1px solid var(--gold);border-radius:18px;padding:1.5rem;text-align:center}
-.gate p{margin-bottom:1rem;color:var(--gold-light);font-weight:600}
-@media (max-width:700px){.cat-head h2{font-size:2.2rem}.cat-head p{font-size:.88rem}}
-
 </style>
 </head>
 <body>
@@ -168,7 +151,7 @@ dialog p{color:var(--muted);margin:.4rem 0 1.2rem}
   <div class="hero-content">
     <h1 class="sr-only">House of Cards</h1>
     <img class="hero-logo" src="https://i.ibb.co/8HjRSLM/6628381c-92f1-454b-a6cb-e8f55bfca3af.webp" alt="House of Cards, cards for every occasion" width="480" height="270">
-    <p>Shuffle up, pick your poison and let the trash talk begin.</p>
+    <p>Card games, board games and party games, delivered countrywide.</p>
     <div class="hero-buttons">
       <a class="btn" href="#games">Browse games</a>
       <a class="btn btn-ghost" href="#how">How to order</a>
@@ -204,14 +187,14 @@ dialog p{color:var(--muted);margin:.4rem 0 1.2rem}
 <main>
   <p class="status" id="status" role="status" aria-live="polite"></p>
   <div id="sections"></div>
-  <p class="empty" id="empty" hidden>No games match that. Try another name, or ask us on WhatsApp.</p>
+  <p class="empty" id="empty" hidden></p>
 </main>
 
 <section class="how" id="how">
   <h2>How ordering works</h2>
   <ol>
-    <li>Pick a game and tap <b>Order</b>.</li>
-    <li>WhatsApp opens with the game name filled in. Send it.</li>
+    <li>Pick a game and tap <b>Order now</b>.</li>
+    <li>WhatsApp opens with the game name and price filled in. Send it.</li>
     <li>We confirm stock, delivery and payment with you.</li>
   </ol>
   <p id="info"></p>
@@ -244,9 +227,6 @@ dialog p{color:var(--muted);margin:.4rem 0 1.2rem}
 <script>
 // ===== EDIT THIS FILE to change products, prices and contact details =====
 const SITE = {
-  usePhotos: false,           // set to true once your real photos are in the "images" folder
-  newPictures: false,         // true = use the NEW card-game pictures (test one first, see the notes)
-  newHost: "https://i.ibb.co.com/",   // if the new pictures show "image not found", try "https://i.ibb.co/" here
   whatsapp: "254717706729",   // international format, no + or spaces
   delivery: "",               // e.g. "Nairobi: Kshs 300, 1 day. Other towns: courier, 2-4 days."
   payment: ""                 // e.g. "M-Pesa Till 123456, pay on confirmation."
@@ -254,76 +234,70 @@ const SITE = {
 
 // To change a price, edit the number. To add a game, copy a line and change it.
 // c = card game, b = board game, a = adult (18+). Arguments: name, price, image, description
-const I = "https://i.ibb.co/";
-// Two pictures per game:
-//   1) your real photo  -> images/<game-name>.jpg   (e.g. images/uno-flip.jpg)
-//   2) the gold poster  -> images/<game-name>-poster.<ext>, or the ImgBB link below if that file is missing
-// While SITE.usePhotos is false, only the poster shows.
-const slug = (s) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const full = (u) => /^(https?:)?\/\//.test(u) || /^(20HOC|images)\//.test(u) ? u : I + u;
-const pick = (old, nw) => (SITE.newPictures && nw) ? (/^https?:\/\//.test(nw) ? nw : SITE.newHost + nw) : full(old);
-const mk = (cat) => (name, price, img, desc, newImg) => {
-  const src = pick(img, newImg);                 // img = picture that works now, newImg = your new picture (optional)
-  return { cat, name, price, img: src, photo: "images/" + slug(name) + ".jpg", posterLocal: "images/" + slug(name) + "-poster." + src.split(".").pop(), desc };
-};
+// Image: a bare file name (uuid.webp) is read from the "20HOC" folder next to this file.
+// An image containing a "/" (like "abc123/photo.png") is loaded from ImgBB.
+const img = (u) => /^(https?:)?\/\//.test(u) ? u : u.includes("/") ? "https://i.ibb.co/" + u : "20HOC/" + u;
+const mk = (cat) => (name, price, file, desc) => ({ cat, name, price, img: img(file), desc });
 const c = mk("card"), b = mk("board"), a = mk("adult");
 
 const PRODUCTS = [
   // ---------- CARD GAMES ----------
-  c("UNO", 500, "20HOC/e07a5556-cdbb-42ae-982a-eb0d15310401.webp", `No game night is ever truly complete without the card deck that tests every friendship in the room! Match colors, drop Reverse cards at the worst possible moment, stack that ruthless +4, and don’t forget to yell "UNO!" before anyone catches you!`, "bN0h8nLf/e07a5556-cdbb-42ae-982a-eb0d15310401.webp"),
-  c("UNO Flip", 500, "20HOC/7bd2de8a-80e8-4edc-8be0-be97b290fd3b.webp", `UNO Flip! is a thrilling twist on the classic UNO game! With double-sided cards, players can flip the deck from Light Side to Dark Side, bringing tougher penalties, surprises and exciting new challenges. Be the first to play all your cards and claim victory!`, "pV4TyKD9/7bd2de8a-80e8-4edc-8be0-be97b290fd3b.webp"),
-  c("UNO Dare", 500, "20HOC/c66a4b08-2ca7-47a7-b876-4e29fcdcc291.webp", `UNO Dare! takes the classic UNO game to another level with exciting dares and unexpected challenges! Play your cards, challenge your friends, and choose between completing a dare or facing a penalty. It's the perfect mix of strategy, laughter and friendly competition!`, "hvg20Xmy/c66a4b08-2ca7-47a7-b876-4e29fcdcc291.webp"),
-  c("Giant UNO BTS", 600, "20HOC/b851cf4c-5b1c-4adb-9daf-74a2caa160a5.webp", `UNO BTS brings the excitement of the classic UNO card game together with the global sensation BTS! Featuring BTS-themed cards and special designs inspired by the iconic group, this edition is perfect for ARMY fans who love fun, friendly competition and unforgettable game nights.`, "MZVTMvt5/b851cf4c-5b1c-4adb-9daf-74a2caa160a5.webp"),
-  c("UNO Flex", 600, "20HOC/34f51873-29a3-4d4d-99e1-a2e1b78ef360.webp", `Think you’re safe with one card left? Watch your friend flip the whole game on its head! UNO Flex upgrades classic UNO with special Flex Cards that let you switch a card’s color on the spot, plus Power Cards that turn a simple "Draw Two" into a massive draw for every single player at the table!`, "vTtbPxNs/34f51873-29a3-4d4d-99e1-a2e1b78ef360.webp"),
-  c("UNO No Mercy", 600, "20HOC/236c141b-089d-498f-a788-34611b4d87de.webp", `Forget +4, say hello to +6, +10, and stacking draw penalties until someone gets eliminated on the spot! UNO Show ’em No Mercy is the most ruthless UNO ever made: stack cards, swap entire hands, and if you ever hit 25 cards in your hand, you’re officially out of the game!`, "Wz8cmLhQ/236c141b-089d-498f-a788-34611b4d87de.webp"),
-  c("UNO Party", 600, "20HOC/0c52b775-1f7a-40b7-8475-e032b10a098e.webp", `Why leave half the room watching when up to 16 players can jump into the madness at once?! UNO Party cranks up classic UNO with Point Taken (everyone points at one victim who draws that many cards!), Wild Drawn Together (linking two players' fates!), and lightning-fast Speed Play!`, "TPb87WKN/0c52b775-1f7a-40b7-8475-e032b10a098e.webp"),
-  c("DOS", 600, "20HOC/f12295c1-ec56-45ec-933a-dadbf6361de4.webp", `You’ve mastered yelling "UNO!" now get ready for twice the speed, twice the piles, and yelling "DOS!" In DOS, players match numbers across two center discard piles, trigger Double Color Match bonuses to force opponents to draw, and race to clear their hand first!`, "9FQ63k4f/f12295c1-ec56-45ec-933a-dadbf6361de4.webp"),
-  c("Say What You Meme", 1600, "20HOC/6709b909-57ff-4e60-a25d-364b1525a80b.webp", `Packed with hundreds of relatable caption cards and iconic internet reaction photos (plus a mini easel to display the meme of the round)! Zero setup, instant laughs, and zero filter. What Do You Meme? turns any Friday night hangout or weekend road trip into nonstop comedy.`, "3NJcTywk/6709b909-57ff-4e60-a25d-364b1525a80b.webp"),
-  c("Get ChurchED", 1000, "20HOC/46808504-1897-4748-9d35-1f95140b1454.webp", `Finally, a party card game you can play with your youth group, chama, family, and church crew without skipping a single card! Easy to learn in seconds and packed with replayable rounds, Get ChurchED brings non-stop energy to Sunday afternoons, road trips, and fellowship nights.`, "1zh7z7zM/46808504-1897-4748-9d35-1f95140b1454.webp"),
-  c("Codenames Pictures", 1000, "20HOC/d0a570fe-d33d-4ad8-94b7-ebf18cfb84ac.webp", `Easy to learn in 3 minutes and endlessly replayable for 4 to 8+ players! Because every picture card packs multiple visual twists, Codenames Pictures works brilliantly for mixed-age family game nights, office team-building, and competitive Friday night hangouts.`, "jjc6rMnw/d0a570fe-d33d-4ad8-94b7-ebf18cfb84ac.webp"),
-  c("Our Moments Family", 800, "20HOC/fe955c20-c220-484e-b5d8-e16cc4cf91a6.webp", `Put the tablets, phones, and TV remotes aside and get the whole living room talking! Our Moments: Family Edition packs 100 fun, thoughtful, and hilarious conversation starters built to bridge the gap between kids, teens, and parents, sparking stories you’ve never heard before!`, "htq5rPFj/fe955c20-c220-484e-b5d8-e16cc4cf91a6.webp"),
-  c("Our Moments Generations", 800, "20HOC/a3df26e0-a882-4cc2-98dc-a9efde0880be.webp", `The ultimate companion for shags visits, Sunday family lunches, and December holiday reunions! Zero complicated setup, just pass the deck around the table and watch grandparents share childhood memories while kids and parents share non-stop laughs.`, "PqCYvY6k/a3df26e0-a882-4cc2-98dc-a9efde0880be.webp"),
-  c("Party Charades", 1200, "20HOC/3bbc6c9e-f1a6-43c4-9829-41a54dd8ad89.webp", `No talking, no pointing, and 60 seconds on the clock while your teammates scream the wildest wrong guesses! Party Charades brings non-stop physical comedy to the living room. Act out movies, celebrities, actions, and hilarious phrases before the timer runs out!`, "255RQ8v4/3bbc6c9e-f1a6-43c4-9829-41a54dd8ad89.webp"),
-  c("What Do You Meme", 1850, "20HOC/cc311546-dd92-49c2-8d0f-78417d4ae915.webp", `What Do You Meme? is the hilarious party game where players compete to create the funniest memes! Match caption cards with photo cards to make outrageous combinations and get everyone laughing. Perfect for parties, game nights and unforgettable moments with friends!`, "Pq7c1bdd/cc311546-dd92-49c2-8d0f-78417d4ae915.webp"),
-  // FIX ME: the description below was copied from "Do You Really Know Your Family". Replace it with the real one.
-  c("Beat The Parents", 2550, "20HOC/0c3080dc-1210-4bb8-9ead-46034582dbf7.webp", `Think you know your family inside out? Let’s put that to the test. Do You Really Know Your Family? brings non-stop laughs, hilarious confessions, and wild mini-challenges as parents and kids battle to prove who actually pays attention at home.`, "vH3dcVgN/0c3080dc-1210-4bb8-9ead-46034582dbf7.webp"),
-  c("Quiddler", 1050, "20HOC/9b2b8e75-db60-4f03-ac83-de9861c92690.webp", `Warning: this game will cause competitive spelling bees. Quiddler is the ultimate test of your vocabulary and speed. It starts easy with 3-letter words, but by Round 8, you're sweating over 10-letter anagrams. Who’s the word nerd in your group?`, "pVcZrVV0/9b2b8e75-db60-4f03-ac83-de9861c92690.webp"),
-  c("Talking Point Family", 1234, "20HOC/a2168a98-682a-4d25-a608-6e0562cf5184.webp", `Trade screen time for real connection. Talking Point: Family Edition replaces "How was your day?" with 200 fun, thoughtful, and hilarious questions that actually get everyone talking, from the kids to the grandparents.`, "bJkZhTvF/a2168a98-682a-4d25-a608-6e0562cf5184.webp"),
-  c("Clue Suspect", 1900, "20HOC/30e209e6-8759-4d48-9d89-439ddbc045b4.png", `Trust nobody at the table. Clue Suspect packs all the drama, bluffing, and detective work of classic Clue into a fast-paced card game. Crack the who, what, and where before your friends throw you off the trail.`),
-  c("Do You Really Know Your Family", 1300, "20HOC/a2083af8-3491-49f3-bfe7-e6d6bbe3889a.webp", `You may share the same blood, home, and memories, but how well do you truly know the people closest to you? It's time to put your family knowledge to the test!`, "hvvNmCdq/a2083af8-3491-49f3-bfe7-e6d6bbe3889a.webp"),
-  c("Lyrically Correct", 950, "20HOC/d4060603-3e7b-4916-a947-2685c45c62be.webp", `Don’t just hum the beat, finish the lyrics! Lyrically Correct puts your 90s, 2000s, and hip-hop & R&B memory to the ultimate test.`, "vZFS88X2/d4060603-3e7b-4916-a947-2685c45c62be.webp"),
-  c("Liar's UNO", 600, "20HOC/dbe2db0d-b984-46d4-b962-3a8bc79cf6ae.webp", `Trust nobody at the table. Every turn is a staring contest, every card could be a trap, and one false accusation costs you two penalty cards!`, "XqBQ3t5d/dbe2db0d-b984-46d4-b962-3a8bc79cf6ae.webp"),
-  c("Anomia", 800, "20HOC/2060b52a-ca69-468b-b4a0-ec53f4dc60dd.webp", `Your brain knows the answer, until your friend shouts it first! In Anomia, matching symbols trigger instant head-to-head category battles where the first person to blurt out an answer steals the card!`, "1X1JmJrH/2060b52a-ca69-468b-b4a0-ec53f4dc60dd.webp"),
-  c("Do You Really Know Your Friends?", 650, "20HOC/f1384922-e998-4cf3-b0d9-e941f0af7fd8.webp", `In Do You Really Know Your Friends?, one person takes the hot seat while everyone else writes down what they think you’d say, and the board reveals spark instant roasts and non-stop laughs!`, "Hsx7Jbvr/f1384922-e998-4cf3-b0d9-e941f0af7fd8.webp"),
-  c("Monopoly Deal Card Game", 650, "20HOC/730b158b-7e54-41d1-8828-50f139a0ffcb.webp", `Why wait until month-end to stress over rent when you can charge your friends double rent on a Tuesday night? One Sly Deal card and suddenly your bestie’s whole property empire belongs to you!`, "NMBKQXrD/730b158b-7e54-41d1-8828-50f139a0ffcb.webp"),
-  c("Name 5", 900, "20HOC/a5bc4946-310d-44dd-91b4-ce9a3e3067ec.webp", `Easy to learn in 10 seconds, hilarious for hours! From "Name 5 things in a fridge" to "Name 5 songs by Beyoncé", Name 5 brings friends, couples, and family into the chaos instantly.`, "4Nqnmq9Z/a5bc4946-310d-44dd-91b4-ce9a3e3067ec.webp"),
-  c("Little Talk: Conversation Starters for Kids & Families", 1100, "20HOC/d28f6172-a237-48c3-a6e8-582fb58b8595.webp", `No tablets, no TV, no rushed routines, just genuine laughs and unexpected answers from the little ones. Whether it’s 10 minutes before bed or a Sunday afternoon drive, Little Talk helps kids open up, build confidence, and share what’s really on their minds.`, "PfF5R9Ky/d28f6172-a237-48c3-a6e8-582fb58b8595.webp"),
+  c("UNO", 500, "e07a5556-cdbb-42ae-982a-eb0d15310401.webp", `No game night is ever truly complete without the card deck that tests every friendship in the room! Match colors, drop Reverse cards at the worst possible moment, stack that ruthless +4, and don’t forget to yell "UNO!" before anyone catches you!`),
+  c("UNO Flip", 500, "7bd2de8a-80e8-4edc-8be0-be97b290fd3b.webp", `UNO Flip! is a thrilling twist on the classic UNO game! With double-sided cards, players can flip the deck from Light Side to Dark Side, bringing tougher penalties, surprises and exciting new challenges. Be the first to play all your cards and claim victory!`),
+  c("UNO Dare", 500, "c66a4b08-2ca7-47a7-b876-4e29fcdcc291.webp", `UNO Dare! takes the classic UNO game to another level with exciting dares and unexpected challenges! Play your cards, challenge your friends, and choose between completing a dare or facing a penalty. It's the perfect mix of strategy, laughter and friendly competition!`),
+  c("Giant UNO BTS", 600, "b851cf4c-5b1c-4adb-9daf-74a2caa160a5.webp", `UNO BTS brings the excitement of the classic UNO card game together with the global sensation BTS! Featuring BTS-themed cards and special designs inspired by the iconic group, this edition is perfect for ARMY fans who love fun, friendly competition and unforgettable game nights.`),
+  c("UNO Flex", 600, "34f51873-29a3-4d4d-99e1-a2e1b78ef360.webp", `Think you’re safe with one card left? Watch your friend flip the whole game on its head! UNO Flex upgrades classic UNO with special Flex Cards that let you switch a card’s color on the spot, plus Power Cards that turn a simple "Draw Two" into a massive draw for every single player at the table!`),
+  c("UNO No Mercy", 600, "236c141b-089d-498f-a788-34611b4d87de.webp", `Forget +4, say hello to +6, +10, and stacking draw penalties until someone gets eliminated on the spot! UNO Show ’em No Mercy is the most ruthless UNO ever made: stack cards, swap entire hands, and if you ever hit 25 cards in your hand, you’re officially out of the game!`),
+  c("UNO Party", 600, "0c52b775-1f7a-40b7-8475-e032b10a098e.webp", `Why leave half the room watching when up to 16 players can jump into the madness at once?! UNO Party cranks up classic UNO with Point Taken (everyone points at one victim who draws that many cards!), Wild Drawn Together (linking two players' fates!), and lightning-fast Speed Play!`),
+  c("DOS", 600, "f12295c1-ec56-45ec-933a-dadbf6361de4.webp", `You’ve mastered yelling "UNO!" now get ready for twice the speed, twice the piles, and yelling "DOS!" In DOS, players match numbers across two center discard piles, trigger Double Color Match bonuses to force opponents to draw, and race to clear their hand first!`),
+  // CHECK: "Say What You Meme" and "What Do You Meme" look like the same game at different prices (1,600 vs 1,850). Keep one, or make the names and copy clearly different.
+  c("Say What You Meme", 1600, "6709b909-57ff-4e60-a25d-364b1525a80b.webp", `Packed with hundreds of relatable caption cards and iconic internet reaction photos (plus a mini easel to display the meme of the round)! Zero setup, instant laughs, and zero filter. What Do You Meme? turns any Friday night hangout or weekend road trip into nonstop comedy.`),
+  c("Get ChurchED", 1000, "46808504-1897-4748-9d35-1f95140b1454.webp", `Finally, a party card game you can play with your youth group, chama, family, and church crew without skipping a single card! Easy to learn in seconds and packed with replayable rounds, Get ChurchED brings non-stop energy to Sunday afternoons, road trips, and fellowship nights.`),
+  c("Codenames Pictures", 1000, "d0a570fe-d33d-4ad8-94b7-ebf18cfb84ac.webp", `Easy to learn in 3 minutes and endlessly replayable for 4 to 8+ players! Because every picture card packs multiple visual twists, Codenames Pictures works brilliantly for mixed-age family game nights, office team-building, and competitive Friday night hangouts.`),
+  c("Our Moments Family", 800, "fe955c20-c220-484e-b5d8-e16cc4cf91a6.webp", `Put the tablets, phones, and TV remotes aside and get the whole living room talking! Our Moments: Family Edition packs 100 fun, thoughtful, and hilarious conversation starters built to bridge the gap between kids, teens, and parents, sparking stories you’ve never heard before!`),
+  c("Our Moments Generations", 800, "a3df26e0-a882-4cc2-98dc-a9efde0880be.webp", `The ultimate companion for shags visits, Sunday family lunches, and December holiday reunions! Zero complicated setup, just pass the deck around the table and watch grandparents share childhood memories while kids and parents share non-stop laughs.`),
+  c("Party Charades", 1200, "3bbc6c9e-f1a6-43c4-9829-41a54dd8ad89.webp", `No talking, no pointing, and 60 seconds on the clock while your teammates scream the wildest wrong guesses! Party Charades brings non-stop physical comedy to the living room. Act out movies, celebrities, actions, and hilarious phrases before the timer runs out!`),
+  c("What Do You Meme", 1850, "cc311546-dd92-49c2-8d0f-78417d4ae915.webp", `What Do You Meme? is the hilarious party game where players compete to create the funniest memes! Match caption cards with photo cards to make outrageous combinations and get everyone laughing. Perfect for parties, game nights and unforgettable moments with friends!`),
+  // CHECK: this description is a placeholder I wrote because the old one was copied from another game. Replace it with the real one from the box.
+  c("Beat The Parents", 2550, "0c3080dc-1210-4bb8-9ead-46034582dbf7.webp", `Kids against parents, and nobody is safe! Take turns answering questions and taking on challenges to find out who really knows more. Perfect for family weekends, birthdays and holiday get-togethers.`),
+  c("Quiddler", 1050, "9b2b8e75-db60-4f03-ac83-de9861c92690.webp", `Warning: this game will cause competitive spelling bees. Quiddler is the ultimate test of your vocabulary and speed. It starts easy with 3-letter words, but by Round 8, you're sweating over 10-letter anagrams. Who’s the word nerd in your group?`),
+  // CHECK: price 1234 looks like a placeholder.
+  c("Talking Point Family", 1234, "a2168a98-682a-4d25-a608-6e0562cf5184.webp", `Trade screen time for real connection. Talking Point: Family Edition replaces "How was your day?" with 200 fun, thoughtful, and hilarious questions that actually get everyone talking, from the kids to the grandparents.`),
+  c("Clue Suspect", 1900, "30e209e6-8759-4d48-9d89-439ddbc045b4.png", `Trust nobody at the table. Clue Suspect packs all the drama, bluffing, and detective work of classic Clue into a fast-paced card game. Crack the who, what, and where before your friends throw you off the trail.`),
+  c("Do You Really Know Your Family", 1300, "a2083af8-3491-49f3-bfe7-e6d6bbe3889a.webp", `You may share the same blood, home, and memories, but how well do you truly know the people closest to you? It's time to put your family knowledge to the test!`),
+  c("Lyrically Correct", 950, "d4060603-3e7b-4916-a947-2685c45c62be.webp", `Don’t just hum the beat, finish the lyrics! Lyrically Correct puts your 90s, 2000s, and hip-hop & R&B memory to the ultimate test.`),
+  c("Liar's UNO", 600, "dbe2db0d-b984-46d4-b962-3a8bc79cf6ae.webp", `Every turn is a staring contest, every card could be a trap, and one false accusation costs you two penalty cards!`),
+  c("Anomia", 800, "2060b52a-ca69-468b-b4a0-ec53f4dc60dd.webp", `Your brain knows the answer, until your friend shouts it first! In Anomia, matching symbols trigger instant head-to-head category battles where the first person to blurt out an answer steals the card!`),
+  c("Do You Really Know Your Friends?", 650, "f1384922-e998-4cf3-b0d9-e941f0af7fd8.webp", `In Do You Really Know Your Friends?, one person takes the hot seat while everyone else writes down what they think you’d say, and the board reveals spark instant roasts and non-stop laughs!`),
+  c("Monopoly Deal Card Game", 650, "730b158b-7e54-41d1-8828-50f139a0ffcb.webp", `Why wait until month-end to stress over rent when you can charge your friends double rent on a Tuesday night? One Sly Deal card and suddenly your bestie’s whole property empire belongs to you!`),
+  c("Name 5", 900, "a5bc4946-310d-44dd-91b4-ce9a3e3067ec.webp", `Easy to learn in 10 seconds, hilarious for hours! From "Name 5 things in a fridge" to "Name 5 songs by Beyoncé", Name 5 brings friends, couples, and family into the chaos instantly.`),
+  c("Little Talk: Conversation Starters for Kids & Families", 1100, "d28f6172-a237-48c3-a6e8-582fb58b8595.webp", `No tablets, no TV, no rushed routines, just genuine laughs and unexpected answers from the little ones. Whether it’s 10 minutes before bed or a Sunday afternoon drive, Little Talk helps kids open up, build confidence, and share what’s really on their minds.`),
 
   // ---------- BOARD GAMES ----------
-  b("Ubongo 3D", 2100, "20HOC/7dcb2a58-4848-49f7-9372-2a1a91d36b2a.webp", `Ubongo! 3D is an exciting 3D puzzle game that challenges players to think fast, solve puzzles and beat the clock! Race to fit colourful 3D pieces into the correct spaces, building your solution to the required height before time runs out. Perfect for family game nights, puzzle lovers and friendly competition!`),
-  b("Connect 4", 1000, "20HOC/b7a16ea2-0cd5-4981-ab8f-00fc6edbe7ea.webp", `Connect 4 is the classic two-player strategy game where the goal is to be the first to connect four discs in a row, horizontally, vertically or diagonally! Take turns dropping your coloured discs into the grid, block your opponent’s moves and plan your winning strategy. Simple to learn, exciting to play and perfect for family game nights!`),
-  b("Monopoly Electronic Banking", 7650, "20HOC/182dbfbc-61e5-4bae-a1fd-eae626e17980.webp", `Paper money is officially cancelled. Swipe, tap, and bankrupt your friends in high definition with Monopoly: Electronic Banking. No more shady bankers stealing from the tray, every transaction is tracked! Ready to build your empire?`),
-  b("Jenga", 850, "20HOC/94e7245b-3d90-468d-9023-f0ffbc3b5a81.webp", `One wrong move and it’s all over. Jenga turns the simplest task into a heart-pounding thriller, especially when everyone is watching and waiting for you to slip up.`),
-  b("Brains Chess", 1000, "20HOC/0b68718d-8ee9-4152-af84-62257efc23b7.webp", `Think you’re a chess grandmaster? Prove it. Brains Chess flips the classic game into an addictive solo logic puzzle, where one wrong move on the board and it’s game over.`),
-  b("Scrabble", 1300, "20HOC/2e162162-5073-440d-a362-c9a38f33dcbc.webp", `Spell it. Score it. Own the board. Whether it’s a chill Sunday afternoon or a heated family showdown, Scrabble never misses.`),
-  b("Tapple Family Word Game", 2200, "20HOC/b564ff50-c97b-4d61-a4f8-8490731036b4.webp", `144 categories, 20 letters, and 10 seconds of pure adrenaline! Whether it’s Sunday family dinner, an Airbnb weekend, or a loud house party, Tapple takes 15 seconds to learn and gets everyone shouting across the living room.`),
-  b("2 in 1 Scrabble Original and Monopoly", 1600, "20HOC/4bf318e8-bee4-4f64-854e-03f8e01d436a.webp", `Two timeless classics, one compact box, endless weekend rematches! Whether it’s a quiet Sunday word battle with family or a ruthless late-night property empire showdown, this 2-in-1 Scrabble & Monopoly set is the ultimate game-night staple and a top-tier gift!`),
-  b("Chinese Checkers", 1550, "20HOC/09a3db88-9e51-43ad-b4f3-764987c23ae9.webp", `Bright marbles, zero screens, and endless rematches! Whether it’s a lazy Sunday afternoon with family or a chill coffee-table showdown with friends, Chinese Checkers brings everyone around the board in seconds.`),
-  b("Dart Board", 1550, "20HOC/e5a3049f-3914-4cb3-9630-85cdd1a4d2d1.webp", `Instant room upgrade, zero setup hassle, and hours of friendly trash talk! Hang it in your living room, Airbnb, or office break area. Our Dart Board Set comes complete with darts, so you’re ready to throw straight out of the box.`),
-  b("Monopoly Junior Kuromi", 1500, "20HOC/55e5e124-9d6c-4080-8fe1-8e675c4e879c.webp", `Looking for the ultimate birthday gift or weekend family game? Monopoly Junior: Kuromi Edition is easy for kids ages 5+ to pick up in minutes, with no complicated math, quick 30-minute rounds, and major Kuromi attitude in every roll of the dice!`),
-  b("Monopoly Junior Spider-Man", 1500, "20HOC/94125d92-a4ee-4ff9-88a3-37d9b8484fb2.webp", `Looking for the ultimate birthday gift for a young superhero? Monopoly Junior: Spider-Man Edition takes minutes to learn, keeps kids ages 5+ off screens, and packs big Marvel excitement into quick 30-minute matches the whole family can join!`),
-  b("Monopoly Junior Cars", 1500, "20HOC/155fb966-e8c4-424b-97e1-4f9a9fffd53a.webp", `Ka-chow! Start your engines and race around Radiator Springs! Monopoly Junior: Disney Pixar Cars Edition puts kids in the driver’s seat with custom character tokens Lightning McQueen, Mater, Cruz Ramirez, and Jackson Storm, plus fast, simplified rules made for non-stop racing fun!`),
-  b("Magnetic Checkers Set", 1500, "20HOC/f3fe6ab7-4472-4289-a2a2-b3daee35a00d.webp", `Compact, sleek, and ready for instant 1-on-1 showdowns! Folds neatly in half to store all magnetic pieces inside; toss it in your backpack for weekend getaways, campus breaks, or chill family nights at home.`),
-  b("Decrypt Rope Game", 1050, "20HOC/63461271-6182-4a3a-9f33-656a0d6fcede.webp", `Looks simple until you pull the wrong string and make the knot ten times worse! In Decrypt Rope Game, race to untangle the crisscrossed elastic ropes one clever move at a time, testing your focus, logic, and patience under pressure!`),
-  b("Magnet Battle Chess Game", 1050, "20HOC/c86f6457-7b72-42fc-95aa-20eccd0d57a1.webp", `Think you've got the moves? Put your strategy to the test! Magnet Battle Chess brings an exciting twist to classic chess, combining magnetic pieces, clever tactics, and mind-bending challenges. Perfect for chess lovers, competitive friends, and anyone who loves a good battle of wits!`),
-  b("Monopoly Ultimate Banking", 4500, "20HOC/52b56453-982c-4cc0-84d2-19bb9000c540.webp", `Classic Monopoly upgraded for the contactless era! With Event cards that shake up rent prices instantly and tap-to-pay bank cards that speed up every turn, Monopoly Ultimate Banking keeps family weekends and late-night squad showdowns moving fast from start to bankruptcy.`),
-  b("Table Game Series Football Game", 3500, "20HOC/f6ed1bb3-f4c3-4b3b-b325-dbf0e0eb06b0.webp", `Compact, screen-free, and built for non-stop rematches! Whether you’re settling scores during halftime, keeping football-loving kids entertained all weekend, or upgrading your living room chill zone, this Tabletop Football Game turns any table into a mini pitch.`),
-  b("4 in 1 Chess Set", 1900, "20HOC/b58c686c-456d-473e-9f63-94effc5500eb.webp", `One compact box, zero screens, and endless weekend rematches! Whether you’re packing for an Airbnb getaway, upgrading your coffee table, or shopping for a timeless gift, this 4-in-1 Chess Set keeps every player at the table entertained from beginner to grandmaster.`),
-  b("Wooden Education Toy Set", 2200, "20HOC/20eed8c9-5626-4fb5-8565-5b0592648fe8.webp", `Smooth edges, vibrant non-toxic colours, and built to last through years of playtime! Whether it’s a thoughtful birthday gift, a rainy-day playroom staple, or quality parent-child bonding time, this Wooden Educational Toy Set sparks creativity and problem-solving from day one.`),
-  b("Color Ball Challenge", 1200, "20HOC/24095646-4964-439f-bab8-b342b037bc21.webp", `Bright colors, zero screens, and instant family competition! Easy enough for kids to grasp in seconds yet packed with sneaky strategy for adults, Color Ball Challenge brings hands-on color-matching fun straight to your weekend living room or birthday gift list.`),
-  b("Sequence", 1500, "20HOC/5dab238a-f31b-4ab4-9ce5-713c9819c934.webp", `Easy enough for beginners, intense enough for serious strategists! Play solo or team up 2-on-2. Sequence blends luck of the draw with pure tactical planning, making it the ultimate crowd-pleaser for family weekends, double dates, and loud house parties.`),
-  b("Bible Sequence", 1500, "20HOC/7c1b1b2d-2305-4d50-b57c-981c8cdcadc7.webp", `No reading skills required for younger players; just match the illustrated Bible story on your card to the board, place your chip, and race to complete two rows of five! Ideal for family Sundays, youth group hangouts, and thoughtful gifts across every generation.`, "xCRf0FKP/7c1b1b2d-2305-4d50-b57c-981c8cdcadc7.webp"),
-  b("Sequence Dice Games", 1750, "20HOC/170e45be-59b8-4c71-949d-34be4cd8b3a0.webp", `Love classic Sequence? Wait until you roll the dice! In Sequence Dice, roll to claim numbers on the board, trigger bonus turns with 2s and 12s, or roll a 10 to remove your opponent’s chip right before they connect five in a row!`),
+  b("Ubongo 3D", 2100, "7dcb2a58-4848-49f7-9372-2a1a91d36b2a.webp", `Ubongo! 3D is an exciting 3D puzzle game that challenges players to think fast, solve puzzles and beat the clock! Race to fit colourful 3D pieces into the correct spaces, building your solution to the required height before time runs out. Perfect for family game nights, puzzle lovers and friendly competition!`),
+  b("Connect 4", 1000, "b7a16ea2-0cd5-4981-ab8f-00fc6edbe7ea.webp", `Connect 4 is the classic two-player strategy game where the goal is to be the first to connect four discs in a row, horizontally, vertically or diagonally! Take turns dropping your coloured discs into the grid, block your opponent’s moves and plan your winning strategy. Simple to learn, exciting to play and perfect for family game nights!`),
+  b("Monopoly Electronic Banking", 7650, "182dbfbc-61e5-4bae-a1fd-eae626e17980.webp", `Paper money is officially cancelled. Swipe, tap, and bankrupt your friends in high definition with Monopoly: Electronic Banking. No more shady bankers stealing from the tray, every transaction is tracked! Ready to build your empire?`),
+  b("Jenga", 850, "94e7245b-3d90-468d-9023-f0ffbc3b5a81.webp", `One wrong move and it’s all over. Jenga turns the simplest task into a heart-pounding thriller, especially when everyone is watching and waiting for you to slip up.`),
+  b("Brains Chess", 1000, "0b68718d-8ee9-4152-af84-62257efc23b7.webp", `Think you’re a chess grandmaster? Prove it. Brains Chess flips the classic game into an addictive solo logic puzzle, where one wrong move on the board and it’s game over.`),
+  b("Scrabble", 1300, "2e162162-5073-440d-a362-c9a38f33dcbc.webp", `Spell it. Score it. Own the board. Whether it’s a chill Sunday afternoon or a heated family showdown, Scrabble never misses.`),
+  b("Tapple Family Word Game", 2200, "b564ff50-c97b-4d61-a4f8-8490731036b4.webp", `144 categories, 20 letters, and 10 seconds of pure adrenaline! Whether it’s Sunday family dinner, an Airbnb weekend, or a loud house party, Tapple takes 15 seconds to learn and gets everyone shouting across the living room.`),
+  b("2 in 1 Scrabble Original and Monopoly", 1600, "4bf318e8-bee4-4f64-854e-03f8e01d436a.webp", `Two timeless classics, one compact box, endless weekend rematches! Whether it’s a quiet Sunday word battle with family or a ruthless late-night property empire showdown, this 2-in-1 Scrabble & Monopoly set is the ultimate game-night staple and a top-tier gift!`),
+  b("Chinese Checkers", 1550, "09a3db88-9e51-43ad-b4f3-764987c23ae9.webp", `Bright marbles, zero screens, and endless rematches! Whether it’s a lazy Sunday afternoon with family or a chill coffee-table showdown with friends, Chinese Checkers brings everyone around the board in seconds.`),
+  b("Dart Board", 1550, "e5a3049f-3914-4cb3-9630-85cdd1a4d2d1.webp", `Instant room upgrade, zero setup hassle, and hours of friendly trash talk! Hang it in your living room, Airbnb, or office break area. Our Dart Board Set comes complete with darts, so you’re ready to throw straight out of the box.`),
+  b("Monopoly Junior Kuromi", 1500, "55e5e124-9d6c-4080-8fe1-8e675c4e879c.webp", `Looking for the ultimate birthday gift or weekend family game? Monopoly Junior: Kuromi Edition is easy for kids ages 5+ to pick up in minutes, with no complicated math, quick 30-minute rounds, and major Kuromi attitude in every roll of the dice!`),
+  b("Monopoly Junior Spider-Man", 1500, "94125d92-a4ee-4ff9-88a3-37d9b8484fb2.webp", `Looking for the ultimate birthday gift for a young superhero? Monopoly Junior: Spider-Man Edition takes minutes to learn, keeps kids ages 5+ off screens, and packs big Marvel excitement into quick 30-minute matches the whole family can join!`),
+  b("Monopoly Junior Cars", 1500, "155fb966-e8c4-424b-97e1-4f9a9fffd53a.webp", `Ka-chow! Start your engines and race around Radiator Springs! Monopoly Junior: Disney Pixar Cars Edition puts kids in the driver’s seat with custom character tokens Lightning McQueen, Mater, Cruz Ramirez, and Jackson Storm, plus fast, simplified rules made for non-stop racing fun!`),
+  b("Magnetic Checkers Set", 1500, "f3fe6ab7-4472-4289-a2a2-b3daee35a00d.webp", `Compact, sleek, and ready for instant 1-on-1 showdowns! Folds neatly in half to store all magnetic pieces inside; toss it in your backpack for weekend getaways, campus breaks, or chill family nights at home.`),
+  b("Decrypt Rope Game", 1050, "63461271-6182-4a3a-9f33-656a0d6fcede.webp", `Looks simple until you pull the wrong string and make the knot ten times worse! In Decrypt Rope Game, race to untangle the crisscrossed elastic ropes one clever move at a time, testing your focus, logic, and patience under pressure!`),
+  b("Magnet Battle Chess Game", 1050, "c86f6457-7b72-42fc-95aa-20eccd0d57a1.webp", `Think you've got the moves? Put your strategy to the test! Magnet Battle Chess brings an exciting twist to classic chess, combining magnetic pieces, clever tactics, and mind-bending challenges. Perfect for chess lovers, competitive friends, and anyone who loves a good battle of wits!`),
+  b("Monopoly Ultimate Banking", 4500, "52b56453-982c-4cc0-84d2-19bb9000c540.webp", `Classic Monopoly upgraded for the contactless era! With Event cards that shake up rent prices instantly and tap-to-pay bank cards that speed up every turn, Monopoly Ultimate Banking keeps family weekends and late-night squad showdowns moving fast from start to bankruptcy.`),
+  b("Table Game Series Football Game", 3500, "f6ed1bb3-f4c3-4b3b-b325-dbf0e0eb06b0.webp", `Compact, screen-free, and built for non-stop rematches! Whether you’re settling scores during halftime, keeping football-loving kids entertained all weekend, or upgrading your living room chill zone, this Tabletop Football Game turns any table into a mini pitch.`),
+  b("4 in 1 Chess Set", 1900, "b58c686c-456d-473e-9f63-94effc5500eb.webp", `One compact box, zero screens, and endless weekend rematches! Whether you’re packing for an Airbnb getaway, upgrading your coffee table, or shopping for a timeless gift, this 4-in-1 Chess Set keeps every player at the table entertained from beginner to grandmaster.`),
+  b("Wooden Education Toy Set", 2200, "20eed8c9-5626-4fb5-8565-5b0592648fe8.webp", `Smooth edges, vibrant non-toxic colours, and built to last through years of playtime! Whether it’s a thoughtful birthday gift, a rainy-day playroom staple, or quality parent-child bonding time, this Wooden Educational Toy Set sparks creativity and problem-solving from day one.`),
+  b("Color Ball Challenge", 1200, "24095646-4964-439f-bab8-b342b037bc21.webp", `Bright colors, zero screens, and instant family competition! Easy enough for kids to grasp in seconds yet packed with sneaky strategy for adults, Color Ball Challenge brings hands-on color-matching fun straight to your weekend living room or birthday gift list.`),
+  b("Sequence", 1500, "5dab238a-f31b-4ab4-9ce5-713c9819c934.webp", `Easy enough for beginners, intense enough for serious strategists! Play solo or team up 2-on-2. Sequence blends luck of the draw with pure tactical planning, making it the ultimate crowd-pleaser for family weekends, double dates, and loud house parties.`),
+  b("Bible Sequence", 1500, "7c1b1b2d-2305-4d50-b57c-981c8cdcadc7.webp", `No reading skills required for younger players; just match the illustrated Bible story on your card to the board, place your chip, and race to complete two rows of five! Ideal for family Sundays, youth group hangouts, and thoughtful gifts across every generation.`),
+  b("Sequence Dice Games", 1750, "170e45be-59b8-4c71-949d-34be4cd8b3a0.webp", `Love classic Sequence? Wait until you roll the dice! In Sequence Dice, roll to claim numbers on the board, trigger bonus turns with 2s and 12s, or roll a 10 to remove your opponent’s chip right before they connect five in a row!`),
 
   // ---------- ADULT GAMES (18+) ----------
   a("Drunken Tower", 2300, "B2h4q64b/Luxury-Drunken-Tower-Game-Poster.png", `Pull. Play. Drink. Don't let it fall! Get ready for wild challenges, hilarious moments and unforgettable game nights.`),
@@ -344,13 +318,14 @@ const PRODUCTS = [
   a("Drunk In Love X-Rated", 1000, "zWpf22sP/7ebd9fba-2354-4b91-a6d7-97b3039b49e2.png", `Forget boring dinner dates and bring the heat straight to your living room or weekend Airbnb! Whether it’s an anniversary surprise, a staycation essential, or a spicy Friday night at home, Drunk In Love X-Rated guarantees laughs, shots, and serious chemistry.`),
   a("Our Moments Couples", 800, "jZxgH8sm/951c0e7a-fd92-4a73-ba76-736160da4500.png", `Compact enough to slip into your bag for coffee dates, road trips, and weekend staycations! Our Moments: Couples turn quiet dinners and cosy living-room evenings into hours of laughter, shared memories, and meaningful stories you’ve never told before.`),
   a("The Ultimate Game For Couples", 950, "bgJZ3d8T/dada84a4-2ba4-447d-9f20-a4cad56ec617.png", `Think you know your partner inside out? Put your relationship to the ultimate test! The Ultimate Game For Couples blends hilarious trivia, playful challenges, and deep conversation prompts that will have you both laughing, debating, and learning brand-new things about each other!`),
-  a("S#!% Happens", 950, "Gf7Q8YJd/4923d5c7-b135-4b4c-b8c7-fd5f8b0e72b6.png", `Zero filter, dark humour, and heated debates over what counts as a true 100/100 disaster! Easy to learn in 60 seconds and guaranteed to have the whole room crying with laughter, Shit Happens is the ultimate icebreaker for Friday night hangouts and weekend Airbnbs.`),
+  a("S#!% Happens", 950, "Gf7Q8YJd/4923d5c7-b135-4b4c-b8c7-fd5f8b0e72b6.png", `Zero filter, dark humour, and heated debates over what counts as a true 100/100 disaster! Easy to learn in 60 seconds and guaranteed to have the whole room crying with laughter, S#!% Happens is the ultimate icebreaker for Friday night hangouts and weekend Airbnbs.`),
   a("Truth or Drink", 2550, "vCjfVNR8/bc75c1bf-28d9-4c5d-a5fe-2bf8c6813b62.png", `Four decks of questions ranging from chill icebreakers to "After Dark" chaos! Whether it’s a Friday night pre-game, a couples' night in, or a weekend Airbnb with the squad, Truth or Drink guarantees exposed secrets, loud laughs, and empty glasses.`),
   a("Never Have I Ever", 2550, "QRM9Y50/b12b90e6-9c36-4ffa-bdac-76ebc51910f8.png", `Zero setup, instant chaos, and stories you’ll be laughing about all year! Packed with hundreds of relatable, savage, and unexpected prompts, Never Have I Ever turns any chill hangout, birthday pre-game, or road trip into an unforgettable confession session.`),
   a("Love Lingual", 950, "Z1Jr7Q6w/f9048786-f20f-42a0-af78-a625f9504e0b.png", `Whether you’re newly dating, celebrating an anniversary, or planning a cozy weekend staycation, Love Lingual turns any dinner table or living room into a distraction-free zone for real connection. Compact enough for road trips and timeless enough to replay all year!`),
   a("Truth or Dare For Couples", 800, "FkT8SF0x/198a9f3e-0a19-4682-9f8f-7ebd7f2e59e5.png", `Skip the predictable dinner routine and bring the excitement straight home! Whether it’s an anniversary surprise, a weekend Airbnb getaway, or a Friday night stay-in, Truth or Dare For Couples keeps you both laughing, flirting, and connecting all night long.`),
   a("Dirty Minds", 1800, "Q7n9nmhK/Gemini-Generated-Image-37g3rs37g3rs37g3.jpg", `The dirtier your mind, the worse you’ll play! Dirty Minds gives you three super suggestive, borderline X-rated clues, only for the real answer to be something totally innocent like a banana, a toothbrush, or a vacuum cleaner!`),
   a("Buzzed", 950, "8n3rYSnq/2840b373-1eec-4a4f-aef9-6fa67a878e07.png", `Zero setup, no winners or losers, just 180 cards designed to expose your entire friend group one sip at a time! Draw a Buzzed card, read the "Drink if..." prompt out loud, and watch everyone guilty slowly reach for their glass!`),
+  // CHECK: "Intimacy" and "BestSelf Intimacy" look like the same product listed twice. Keep one.
   a("Intimacy", 1050, "zVpvWBNg/387db7de-efd8-47c1-96a1-186348dabb08.png", `Real intimacy starts with asking the right questions! The BestSelf Intimacy Deck features 150 thoughtfully crafted prompts across Intimacy, Past, Relationship, About You, Life, and Random, sparking meaningful talks, vulnerability, and stronger connection on every date night.`),
   a("BestSelf Intimacy", 1050, "4gX7JkLJ/05417c02-534a-4de4-b5ec-1796804cf1ee.png", `Whether you’re newly dating, planning a weekend staycation, or shopping for a thoughtful anniversary or bridal shower gift, the BestSelf Intimacy Deck turns any dinner table or living room into a phone-free zone for genuine closeness.`),
   a("BestSelf Icebreaker", 1050, "1Jp10PRw/17b60227-1ea2-4cd3-9ca4-0ee650e1c478.png", `Hello unforgettable conversations! The BestSelf Icebreaker Deck packs 150 thought-provoking, funny, and unexpected prompts across Life, Experiences, Random, Would You Rather, Deep, and Personal to spark instant connection at any table!`),
@@ -381,106 +356,98 @@ const PRODUCTS = [
   try { state.adult = sessionStorage.getItem("hocAdult") === "yes"; } catch (e) {}
 
   const wa = (text) => "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(text);
-  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
   const kes = (n) => "Kshs " + Number(n).toLocaleString("en-KE");
+  const matches = (p, q) => !q || (p.name + " " + (p.desc || "")).toLowerCase().includes(q);
 
-  document.querySelectorAll("[data-wa]").forEach((a) => {
-    a.href = wa("Hi House of Cards, I need help with an order.");
-    a.target = "_blank"; a.rel = "noopener";
+  document.querySelectorAll("[data-wa]").forEach((el) => {
+    el.href = wa("Hi House of Cards, I need help with an order.");
+    el.target = "_blank"; el.rel = "noopener";
   });
 
   const info = [SITE.delivery && "Delivery: " + SITE.delivery, SITE.payment && "Payment: " + SITE.payment].filter(Boolean);
   $("#info").textContent = info.join("  ");
   if (!info.length) $("#info").hidden = true;
 
-  // Picture stages: "photo" (your real photo) -> "pl" (poster in images folder) -> "pr" (poster on ImgBB)
+  // Product data for search engines (adult items are left out on purpose)
+  const absUrl = (u) => { try { return new URL(u, location.href).href; } catch (e) { return u; } };
+  const ld = document.createElement("script");
+  ld.type = "application/ld+json";
+  ld.textContent = JSON.stringify({
+    "@context": "https://schema.org", "@type": "ItemList",
+    itemListElement: PRODUCTS.filter((p) => p.cat !== "adult").map((p, i) => ({
+      "@type": "ListItem", position: i + 1,
+      item: { "@type": "Product", name: p.name, description: p.desc, image: absUrl(p.img),
+        offers: { "@type": "Offer", price: p.price, priceCurrency: "KES", availability: "https://schema.org/InStock" } }
+    }))
+  });
+  document.head.appendChild(ld);
+
   function card(p) {
-    const meta = [p.players && p.players + " players", p.age && "Age " + p.age].filter(Boolean).join(" · ");
-    const photos = !!SITE.usePhotos;
-    return '<article class="card" data-cat="' + p.cat + '">' +
+    return '<article class="card">' +
       '<div class="corner"><span class="pip">' + SUIT[p.cat] + '</span><span class="price">' + kes(p.price) + '</span></div>' +
-      '<div class="gal" data-photo="' + esc(p.photo) + '" data-pl="' + esc(p.posterLocal) + '" data-pr="' + esc(p.img) + '">' +
-      '<img src="' + esc(photos ? p.photo : p.img) + '" data-stage="' + (photos ? "photo" : "pr") + '" alt="' + esc(p.name) + '" width="400" height="400" loading="lazy">' +
-      (photos ? '<div class="tabs" hidden><button type="button" class="tab on" data-show="photo">Box photo</button><button type="button" class="tab" data-show="poster">Poster</button></div>' : "") +
-      '</div>' +
+      '<div class="gal" data-cat="' + p.cat + '"><img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" width="400" height="400" loading="lazy"></div>' +
       '<div class="body"><h3>' + esc(p.name) + '</h3>' +
-      (meta ? '<p class="meta">' + esc(meta) + '</p>' : "") +
       '<p class="desc">' + esc(p.desc || "") + '</p>' +
       '<button class="more" type="button" aria-expanded="false">Read more</button>' +
-      '<a class="btn" target="_blank" rel="noopener" aria-label="Order ' + esc(p.name) + ' on WhatsApp" href="' + wa("Hi House of Cards, I would like to order: " + p.name) + '">Order now</a></div></article>';
+      '<a class="btn" target="_blank" rel="noopener" aria-label="Order ' + esc(p.name) + ' on WhatsApp" href="' +
+      wa("Hi House of Cards, I would like to order: " + p.name + " (" + kes(p.price) + ")") + '">Order now</a></div></article>';
   }
 
-  const section = (c, inner) =>
-    '<section class="cat" id="cat-' + c.id + '"><header class="cat-head"><span class="suit">' + c.suit + '</span><h2>' + c.title + '</h2><p>' + c.intro + '</p></header>' + inner + '</section>';
+  const section = (cat, inner) =>
+    '<section class="cat" id="cat-' + cat.id + '"><header class="cat-head"><span class="suit">' + cat.suit + '</span><h2>' + cat.title + '</h2><p>' + cat.intro + '</p></header>' + inner + '</section>';
 
   function render() {
     const q = state.q.trim().toLowerCase();
-    let html = "", total = 0;
-    CATS.forEach((c) => {
-      if (state.cat !== "all" && state.cat !== c.id) return;
-      if (c.id === "adult" && !state.adult) {            // adult games stay out of the page until 18+ is confirmed
-        if (!q) html += section(c, '<div class="gate"><p>This section is for adults only.</p><button type="button" class="btn" data-age>Confirm I am 18 or older</button></div>');
+    let html = "", total = 0, hiddenAdult = 0;
+    CATS.forEach((cat) => {
+      if (state.cat !== "all" && state.cat !== cat.id) return;
+      if (cat.id === "adult" && !state.adult) {            // adult games stay out of the page until 18+ is confirmed
+        if (!q) html += section(cat, '<div class="gate"><p>This section is for adults only.</p><button type="button" class="btn" data-age>Confirm I am 18 or older</button></div>');
+        else hiddenAdult = PRODUCTS.filter((p) => p.cat === "adult" && matches(p, q)).length;
         return;
       }
-      let list = PRODUCTS.filter((p) => p.cat === c.id && (!q || (p.name + " " + (p.desc || "")).toLowerCase().includes(q)));
+      let list = PRODUCTS.filter((p) => p.cat === cat.id && matches(p, q));
       if (!list.length) return;
-      if (state.sort) list = list.slice().sort((a, b) => (state.sort === "asc" ? a.price - b.price : b.price - a.price));
+      if (state.sort) list = list.slice().sort((x, y) => (state.sort === "asc" ? x.price - y.price : y.price - x.price));
       total += list.length;
-      html += section(c, '<div class="grid">' + list.map(card).join("") + '</div>');
+      html += section(cat, '<div class="grid">' + list.map(card).join("") + '</div>');
     });
     sectionsEl.innerHTML = html;
     emptyEl.hidden = html !== "";
+    if (!emptyEl.hidden) emptyEl.textContent = hiddenAdult
+      ? "No matches here, but some results are in the Adults 18+ section. Tap the Adults 18+ filter to confirm your age and see them."
+      : "No games match that. Try another name, or ask us on WhatsApp.";
     statusEl.textContent = total + (total === 1 ? " game" : " games");
   }
 
-  document.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => {
-    if (b.dataset.cat === "adult" && !state.adult) { pending = "adult"; dialog.showModal(); return; }
-    state.cat = b.dataset.cat;
-    document.querySelectorAll(".chip").forEach((c) => {
-      const on = c === b; c.classList.toggle("on", on); c.setAttribute("aria-pressed", on);
+  document.querySelectorAll(".chip").forEach((chip) => chip.addEventListener("click", () => {
+    if (chip.dataset.cat === "adult" && !state.adult) { pending = "adult"; dialog.showModal(); return; }
+    state.cat = chip.dataset.cat;
+    document.querySelectorAll(".chip").forEach((o) => {
+      const on = o === chip; o.classList.toggle("on", on); o.setAttribute("aria-pressed", on);
     });
     render();
   }));
 
-  qEl.addEventListener("input", () => { state.q = qEl.value; render(); });
+  let timer;
+  qEl.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => { state.q = qEl.value; render(); }, 150); });
   sortEl.addEventListener("change", () => { state.sort = sortEl.value; render(); });
 
   sectionsEl.addEventListener("click", (e) => {
     if (e.target.closest("[data-age]")) { pending = null; dialog.showModal(); return; }
-    const t = e.target.closest(".tab");
-    if (t) {                                   // switch between box photo and poster
-      const g = t.closest(".gal"), im = g.querySelector("img");
-      g.querySelectorAll(".tab").forEach((x) => x.classList.toggle("on", x === t));
-      if (t.dataset.show === "photo") { im.dataset.stage = "photo"; im.src = g.dataset.photo; }
-      else { im.dataset.stage = "pl"; im.src = g.dataset.pl; }
-      return;
-    }
-    const b = e.target.closest(".more"); if (!b) return;
-    const open = b.closest(".card").classList.toggle("open");
-    b.textContent = open ? "Show less" : "Read more";
-    b.setAttribute("aria-expanded", open);
+    const more = e.target.closest(".more"); if (!more) return;
+    const open = more.closest(".card").classList.toggle("open");
+    more.textContent = open ? "Show less" : "Read more";
+    more.setAttribute("aria-expanded", open);
   });
 
-  // Your real photo loaded -> a second picture exists, so show the switch
-  sectionsEl.addEventListener("load", (e) => {
-    const im = e.target; if (im.tagName !== "IMG" || im.dataset.stage !== "photo") return;
-    const g = im.closest(".gal"), tabs = g.querySelector(".tabs");
-    if (tabs && !g.dataset.noposter) tabs.hidden = false;
-  }, true);
-
-  // A picture is missing -> try the next one, and only show the symbol as a last resort
+  // A picture failed to load: show the suit symbol instead of a broken image
   sectionsEl.addEventListener("error", (e) => {
     const im = e.target; if (im.tagName !== "IMG") return;
-    const g = im.closest(".gal"), st = im.dataset.stage;
-    if (st === "photo") { im.dataset.stage = "pl"; im.src = g.dataset.pl; return; }
-    if (st === "pl") { im.dataset.stage = "pr"; im.src = g.dataset.pr; return; }
-    const tabs = g.querySelector(".tabs");
-    if (tabs && !tabs.hidden) {                // poster failed but the photo works: go back to it
-      g.dataset.noposter = "1"; tabs.hidden = true;
-      im.dataset.stage = "photo"; im.src = g.dataset.photo; return;
-    }
+    const g = im.closest(".gal"); if (!g) return;
     const d = document.createElement("div"); d.className = "noimg";
-    d.textContent = SUIT[g.closest(".card").dataset.cat]; g.replaceWith(d);
+    d.textContent = SUIT[g.dataset.cat]; g.replaceWith(d);
   }, true);
 
   $("#yes").addEventListener("click", () => {
@@ -494,7 +461,6 @@ const PRODUCTS = [
 
   render();
 })();
-
 </script>
 </body>
 </html>
