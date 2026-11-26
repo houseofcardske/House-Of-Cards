@@ -1,1005 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>House Of Cards</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://i.ibb.co/CpctSHVr/Gemini-Generated-Image-wqn9knwqn9knwqn9-1.jpg">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House of Cards Kenya | Card &amp; Board Games, Countrywide Delivery</title>
+<meta name="description" content="Buy UNO, Monopoly, Sequence, party card games and board games in Kenya. Prices in Kshs, order on WhatsApp, countrywide delivery.">
+<meta property="og:title" content="House of Cards | Card &amp; Board Games Kenya">
+<meta property="og:description" content="Game nights, sorted. Browse card games and board games and order on WhatsApp.">
+<meta property="og:image" content="https://i.ibb.co/8HjRSLM/6628381c-92f1-454b-a6cb-e8f55bfca3af.webp">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="https://i.ibb.co/CpctSHVr/Gemini-Generated-Image-wqn9knwqn9knwqn9-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0b; --panel:#131215; --gold-light:#f3d28a; --gold:#c8923a; --bronze:#7a4f1b;
+  --amber:#f0a31c; --text:#e9e1d3; --muted:#b9ae9a; --line:#3a2a14;
+  --gold-grad:linear-gradient(180deg,#f3d28a 0%,#c8923a 50%,#8a5a1f 100%);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem;-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.7 Montserrat,system-ui,sans-serif;color:var(--text);background:var(--black);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,.logo,.price,.btn{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.06em}
+h2,.logo{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
+
+/* Gold pill buttons (same look for links and buttons) */
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.1;min-height:3rem;
+  padding:.4rem 1.8rem;background:var(--gold-grad);color:#1a1006;border:0;border-radius:999px;font-size:1.3rem;letter-spacing:.1em;
+  cursor:pointer;box-shadow:0 0 0 1px #f3d28a55 inset,0 4px 14px rgba(240,163,28,.2);transition:filter .2s,transform .2s}
+.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--gold-light);box-shadow:0 0 0 1px var(--bronze) inset}
+
+.topbar{background:#150e06;color:var(--gold-light);border-bottom:1px solid var(--line);text-align:center;font-weight:600;font-size:.75rem;letter-spacing:.12em;padding:.6rem .75rem;text-transform:uppercase}
+
+/* Hero */
+.hero{background:radial-gradient(ellipse at 50% 35%,rgba(240,163,28,.16),transparent 55%),var(--black)}
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem 2rem;padding:1rem max(1rem,4vw);border-bottom:1px solid var(--line)}
+.logo{font-size:2rem;letter-spacing:.1em;line-height:1}
+.nav nav{display:flex;gap:1.75rem;flex-wrap:wrap;font-weight:600;font-size:.85rem;color:var(--muted)}
+.nav nav a{padding:.5rem 0}
+.nav nav a:hover{color:var(--gold-light)}
+.hero-content{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1rem 3.5rem}
+.hero-logo{width:min(320px,72%);height:auto;-webkit-mask-image:radial-gradient(ellipse at 50% 48%,#000 60%,transparent 98%);mask-image:radial-gradient(ellipse at 50% 48%,#000 60%,transparent 98%)}
+.hero-content p{margin:.5rem 0 1.75rem;color:var(--muted);letter-spacing:.06em;max-width:640px}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+.features{background:linear-gradient(#2a1b0a,#120b04);border-block:1px solid var(--line);color:var(--gold-light);display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem 3rem;padding:1rem;font-size:.9rem;font-weight:600}
+.features i{color:var(--amber);font-style:normal;font-size:1.3rem;margin-right:.35rem;vertical-align:middle}
+
+/* Sticky browse bar */
+.tools{position:sticky;top:0;z-index:10;background:rgba(10,10,11,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  padding:.7rem max(1rem,4vw);display:flex;flex-wrap:wrap;gap:.6rem 1rem;justify-content:space-between}
+.chips,.find{display:flex;gap:.5rem;flex-wrap:wrap}
+.chip{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:.45em 1.1em;font:500 .9rem Montserrat,sans-serif;cursor:pointer;transition:border-color .2s}
+.chip:hover{border-color:var(--gold)}
+.chip.on{background:var(--gold-grad);border-color:var(--gold);color:#1a1006;font-weight:600}
+input,select{background:var(--panel);color:var(--text);border:1px solid var(--bronze);border-radius:999px;padding:.55em 1.1em;font:inherit;font-size:1rem}
+input{min-width:min(280px,100%)}
+input::placeholder{color:var(--muted)}
+
+main{max-width:1320px;margin:0 auto;padding:1.5rem max(1rem,3vw) 3rem}
+.status{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.empty{text-align:center;color:var(--muted);padding:3rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;align-items:stretch}
+
+/* Product cards: suit pip and price in the corner, like a playing card */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px 6px 6px 6px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
+.card:hover{border-color:var(--gold)}
+.corner{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem 0}
+.pip{color:var(--amber);font-size:1.3rem;line-height:1}
+.price{color:var(--gold-light);font-size:1.6rem;line-height:1}
+.gal{margin-top:.6rem;background:#070708;border-block:1px solid var(--line)}
+.gal img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+.noimg{margin-top:.6rem;width:100%;aspect-ratio:1;background:#070708;border-block:1px solid var(--line)}
+.noimg{display:grid;place-items:center;font-size:4rem;color:var(--line)}
+.body{padding:1rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3{font-size:1.7rem;line-height:1.1;color:var(--gold-light);overflow-wrap:anywhere}
+.meta{color:var(--amber);font-size:.85rem;font-weight:600}
+.desc{color:var(--muted);font-size:.92rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card.open .desc{display:block}
+.more{align-self:flex-start;background:none;border:0;color:var(--gold-light);font:500 .85rem Montserrat,sans-serif;text-decoration:underline;cursor:pointer;padding:.2rem 0}
+.body .btn{margin-top:auto;font-size:1.15rem;padding:.4rem 1rem}
+.more+.btn{margin-top:auto}
+
+/* How ordering works */
+.how{max-width:720px;margin:0 auto;padding:3rem 1.25rem;border-top:1px solid var(--line)}
+.how h2{font-size:2.6rem;margin-bottom:.5rem}
+.how ol{padding-left:1.3rem;display:grid;gap:.3rem;color:var(--muted)}
+.how b{color:var(--gold-light)}
+.how p{margin-top:1rem;color:var(--muted)}
+
+.banner{text-align:center;padding:3.5rem 1rem;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 100%,rgba(240,163,28,.18),transparent 65%),#100c07}
+.suits{color:var(--amber);font-size:1.6rem;letter-spacing:.5em}
+.banner h2{font-size:3rem;margin:.25rem 0 1.5rem}
+.site-footer{background:#050506;border-top:1px solid var(--line);text-align:center;padding:3rem 1rem 6rem}
+.site-footer h2{font-size:2.4rem;margin-bottom:1.25rem}
+.site-footer p{margin-top:2rem;color:#8a8070;font-size:.8rem}
+
+/* Floating buttons */
+.wa-float,.to-top{position:fixed;bottom:max(1rem,env(safe-area-inset-bottom));z-index:30;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+.wa-float{right:max(1rem,env(safe-area-inset-right));display:inline-flex;align-items:center;gap:.4rem;min-height:3rem;background:#25d366;color:#fff;font:600 1rem system-ui,sans-serif;padding:.7rem 1.3rem;border-radius:999px}
+.to-top{left:max(1rem,env(safe-area-inset-left));width:3rem;height:3rem;background:var(--gold-grad);color:#1a1006;font:700 1.5rem/3rem system-ui,sans-serif;text-align:center;border-radius:50%}
+
+dialog{margin:auto;border:1px solid var(--gold);border-radius:18px;padding:1.75rem;width:min(92vw,380px);text-align:center;background:var(--panel);color:var(--text);box-shadow:0 8px 40px rgba(0,0,0,.8)}
+dialog::backdrop{background:rgba(0,0,0,.8)}
+dialog h2{font-size:2.2rem}
+dialog p{color:var(--muted);margin:.4rem 0 1.2rem}
+.row{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+
+@media (max-width:700px){
+  .topbar{font-size:.65rem;letter-spacing:.06em}
+  .nav{justify-content:center}
+  .nav nav{gap:1rem;justify-content:center}
+  .hero-buttons{flex-direction:column;width:100%;max-width:340px}
+  .features{font-size:.8rem;gap:.3rem 1.2rem}
+  .grid{grid-template-columns:1fr 1fr;gap:.7rem}
+  .card h3{font-size:1.3rem}
+  .price{font-size:1.3rem}
+  .desc{font-size:.85rem;-webkit-line-clamp:2}
+  .body{padding:.7rem}
+  .body .btn{font-size:1.05rem;min-height:2.8rem}
+  .find,input{width:100%}
+  .banner h2,.site-footer h2{font-size:2.1rem}
+  .wa-float{width:3.4rem;height:3.4rem;padding:0;justify-content:center;font-size:1.5rem}
+  .wa-float span{display:none}
+}
+@media (max-width:360px){.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Two-picture switch under each product image */
+.tabs{display:flex;gap:.4rem;justify-content:center;padding:.5rem .5rem .6rem;background:var(--panel);border-top:1px solid var(--line)}
+.tabs[hidden]{display:none}
+.tab{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.25em .9em;font:500 .8rem Montserrat,sans-serif;cursor:pointer}
+.tab.on{background:var(--gold-grad);color:#1a1006;border-color:var(--gold);font-weight:600}
+
+</style>
 </head>
 <body>
 
-<div class="topbar">★ CARDS FOR EVERY OCCASION ★ COUNTRYWIDE DELIVERY ON STANDBY ★ DM TO ORDER ★</div>
-<!-- ============ HERO ============ -->
+<div class="topbar">★ Cards for every occasion ★ Countrywide delivery ★ Order on WhatsApp ★</div>
+
 <section class="hero" id="top">
   <header class="nav">
     <a class="logo" href="#top">HOUSE <span>OF</span> CARDS</a>
-    <nav>
-      <a href="#card-games">CARD GAMES</a>
-      <a href="#board-games">BOARD GAMES</a>
-      <a href="#adult-section">ADULT 18+</a>
-      <a class="order-link" href="#">GET IN TOUCH</a>
+    <nav aria-label="Main">
+      <a href="#games">Games</a>
+      <a href="#how">How ordering works</a>
+      <a data-wa href="#">WhatsApp us</a>
     </nav>
-    <button type="button" class="search-toggle" id="search-toggle" aria-label="Search games" aria-expanded="false" aria-controls="search-panel">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
-      </svg>
-    </button>
   </header>
-
-  <div class="search-panel" id="search-panel" hidden>
-    <label class="sr-only" for="search-input">Search games</label>
-    <input type="search" id="search-input" placeholder="Search games, e.g. UNO, Monopoly…" autocomplete="off">
-    <button type="button" class="search-clear" id="search-clear" aria-label="Clear search">✕</button>
-    <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
-  </div>
-
   <div class="hero-content">
-    <h1 class="sr-only">House Of Cards</h1>
-    <img class="hero-logo" src="https://i.ibb.co/8HjRSLM/6628381c-92f1-454b-a6cb-e8f55bfca3af.webp" alt="House Of Cards - Cards for every occasion">
-    <p>Shuffle Up, Pick Your Poison And Let The Trash Talk Begin</p>
+    <h1 class="sr-only">House of Cards</h1>
+    <img class="hero-logo" src="https://i.ibb.co/8HjRSLM/6628381c-92f1-454b-a6cb-e8f55bfca3af.webp" alt="House of Cards, cards for every occasion" width="480" height="270">
+    <p>Shuffle up, pick your poison and let the trash talk begin.</p>
     <div class="hero-buttons">
-      <a class="pill" href="#card-games">View Card Games</a>
-      <a class="pill" href="#board-games">View Board Games</a>
+      <a class="btn" href="#games">Browse games</a>
+      <a class="btn btn-ghost" href="#how">How to order</a>
     </div>
   </div>
 </section>
 
 <div class="features">
-  <span><i>★</i> Countrywide Delivery</span>
-  <span><i>★</i> Wide Selection of Card &amp; Board Games</span>
-  <span><i>★</i> DM to Order</span>
+  <span><i>★</i> Countrywide delivery</span>
+  <span><i>★</i> Card &amp; board games</span>
+  <span><i>★</i> Order on WhatsApp</span>
 </div>
 
-<!-- ============ WHO WE ARE ============ -->
-<section class="who">
-  <div class="who-text">
-    <div class="dice">♠ ♦ ♣ ♥</div>
-    <h2>GAME NIGHTS, SORTED</h2>
-    <p>Game nights just got an upgrade.</p>
-    <p>From chaotic party decks to strategy battles that'll test your friendships, we've got the cards that turn any group chat into a living room showdown.</p>
+<nav class="tools" id="games" aria-label="Browse games">
+  <div class="chips" role="group" aria-label="Category">
+    <button class="chip on" data-cat="all" aria-pressed="true">All</button>
+    <button class="chip" data-cat="card" aria-pressed="false">♠ Card games</button>
+    <button class="chip" data-cat="board" aria-pressed="false">♦ Board games</button>
+    <button class="chip" data-cat="adult" aria-pressed="false">♥ Adults 18+</button>
   </div>
-  <div class="who-col">
-    <img src="https://i.ibb.co/8nwghZF3/37a825fe-e731-477d-a37a-637469c0e4b7.png" alt="UNO Flip" loading="lazy">
-    <a class="pill" href="#card-games">View All Card Games</a>
+  <div class="find">
+    <label class="sr-only" for="q">Search games</label>
+    <input id="q" type="search" placeholder="Search, e.g. UNO, chess, couples" autocomplete="off">
+    <label class="sr-only" for="sort">Sort</label>
+    <select id="sort">
+      <option value="">Featured</option>
+      <option value="asc">Price: low to high</option>
+      <option value="desc">Price: high to low</option>
+    </select>
   </div>
-  <div class="who-col">
-    <img src="https://i.ibb.co/xqzm92tV/Ubongo-3-D-Under-Golden-Spotlight.png" alt="Ubongo 3D" loading="lazy">
-    <a class="pill" href="#board-games">View All Board Games</a>
-  </div>
-</section>
+</nav>
 
 <main>
-
-  <!-- ============ CARD GAMES ============ -->
-  <section class="category" id="card-games">
-    <div class="dice">♠ ♦ ♣ ♥</div>
-    <h2>CARD GAMES</h2>
-    <p class="intro">Game nights just got an upgrade. From chaotic party decks to strategy battles that'll test your friendships, we've got the cards that turn any group chat into a living room showdown. Shuffle up, pick your poison and let the trash talk begin.</p>
-    <div class="items">
-     <article class="item">
-        <div class="item-text">
-          <h3>UNO</h3>
-          <p class="price">Kshs. 500/-</p>
-          <p class="desc">No game night is ever truly complete without the card deck that tests every friendship in the room! 🃏🔥 Match colors, drop Reverse cards at the worst possible moment, stack that ruthless +4, and don’t forget to yell "UNO!" before anyone catches you!</p>
-          <a class="pill order" href="#" data-name="UNO">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/0jRfQypN/Gemini-Generated-Image-y2iig4y2iig4y2ii.jpg" alt="UNO" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>UNO FLIP</h3>
-          <p class="price">Kshs. 500/-</p>
-          <p class="desc">UNO Flip! is a thrilling twist on the classic UNO game! With double-sided cards, players can flip the deck from Light Side to Dark Side, bringing tougher penalties, surprises and exciting new challenges. Be the first to play all your cards and claim victory! 🃏🔥</p>
-          <a class="pill order" href="#" data-name="UNO Flip">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/JWcvQRX6/f3e55d76-26eb-47f5-9773-857ba43ca8f1.png" alt="UNO Flip" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>UNO DARE</h3>
-          <p class="price">Kshs. 500/-</p>
-          <p class="desc">UNO Dare! takes the classic UNO game to another level with exciting dares and unexpected challenges! Play your cards, challenge your friends, and choose between completing a dare or facing a penalty. It's the perfect mix of strategy, laughter and friendly competition! 🃏🔥</p>
-          <a class="pill order" href="#" data-name="UNO Dare">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/ZymZnfh/7beee72f-6958-4090-941d-5c7d6018fd0c.png" alt="UNO Dare" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Giant UNO BTS</h3>
-          <p class="price">Kshs. 600/-</p>
-          <p class="desc">UNO BTS brings the excitement of the classic UNO card game together with the global sensation BTS! Featuring BTS-themed cards and special designs inspired by the iconic group, this edition is perfect for ARMY fans who love fun, friendly competition and unforgettable game nights. 💜🃏</p>
-          <a class="pill order" href="#" data-name="Giant UNO BTS">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/4qqpfZb/8253bcaa-0056-45af-8043-0116110a5b87.png" alt="Giant UNO BTS" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>UNO FLEX</h3>
-          <p class="price">Kshs. 600/-</p>
-          <p class="desc">Think you’re safe with one card left? Watch your friend flip the whole game on its head! 🔄🔥 UNO Flex upgrades classic UNO with special Flex Cards that let you switch a card’s color on the spot—plus Power Cards that turn a simple "Draw Two" into a massive draw for every single player at the table!</p>
-          <a class="pill order" href="#" data-name="UNO FLEX">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Hfjn7Djs/Gemini-Generated-Image-6jo47u6jo47u6jo4.jpg" alt="UNO FLEX" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>UNO NO MERCY</h3>
-          <p class="price">Kshs. 600/-</p>
-          <p class="desc">Forget +4, say hello to +6, +10, and stacking draw penalties until someone gets eliminated on the spot! 💀🔥 UNO Show ’em No Mercy is the most ruthless UNO ever made: stack cards, swap entire hands, and if you ever hit 25 cards in your hand, you’re officially out of the game!</p>
-          <a class="pill order" href="#" data-name="UNO NO MERCY">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Kx6gF2WZ/Gemini-Generated-Image-8nuoeg8nuoeg8nuo.jpg" alt="UNO NO MERCY" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>UNO PARTY</h3>
-          <p class="price">Kshs. 600/-</p>
-          <p class="desc">Why leave half the room watching when up to 16 players can jump into the madness at once?! 🎉🃏 UNO Party cranks up classic UNO with Point Taken (everyone points at one victim who draws that many cards!), Wild Drawn Together (linking two players' fates!), and lightning-fast Speed Play!</p>
-          <a class="pill order" href="#" data-name="UNO PARTY">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/jvJbnL9N/Gemini-Generated-Image-bag1erbag1erbag1.jpg" alt="UNO PARTY" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DOS</h3>
-          <p class="price">Kshs. 600/-</p>
-          <p class="desc">You’ve mastered yelling "UNO!" now get ready for twice the speed, twice the piles, and yelling "DOS!" 🃏🔥 In DOS, players match numbers across two center discard piles, trigger Double Color Match bonuses to force opponents to draw, and race to clear their hand first!</p>
-          <a class="pill order" href="#" data-name="DOS">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/rGjHpnYy/Gemini-Generated-Image-b4huicb4huicb4hu.jpg" alt="DOS" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>SAY WHAT YOU MEME</h3>
-          <p class="price">Kshs. 1,600/-</p>
-          <p class="desc">Packed with hundreds of relatable caption cards and iconic internet reaction photos (plus a mini easel to display the meme of the round)! 🥂🃏 Zero setup, instant laughs, and zero filter. What Do You Meme? turns any Friday night hangout or weekend road trip into nonstop comedy.</p>
-          <a class="pill order" href="#" data-name="SAY WHAT YOU MEME">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/ds6H6xrT/Gemini-Generated-Image-4lmmsu4lmmsu4lmm.jpg" alt="SAY WHAT YOU MEME" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Get ChurchED</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Finally, a party card game you can play with your youth group, chama, family, and church crew without skipping a single card! ✨🥂 Easy to learn in seconds and packed with replayable rounds, Get ChurchED brings non-stop energy to Sunday afternoons, road trips, and fellowship nights.</p>
-          <a class="pill order" href="#" data-name="Get ChurchED">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/TBTsMFB9/Gemini-Generated-Image-ooiqf3ooiqf3ooiq.jpg" alt="Get ChurchED" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Codenames Pictures</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Easy to learn in 3 minutes and endlessly replayable for 4 to 8+ players! 🧩🔥 Because every picture card packs multiple visual twists, Codenames Pictures works brilliantly for mixed-age family game nights, office team-building, and competitive Friday night hangouts.</p>
-          <a class="pill order" href="#" data-name="Codenames Pictures">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/xtQ5xc8k/337a1b7c-4a06-4e33-a7fe-a0dc7098a824.webp" alt="Codenames Pictures" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>OUR MOMENTS Family</h3>
-          <p class="price">Kshs. 800/-</p>
-          <p class="desc">Put the tablets, phones, and TV remotes aside and get the whole living room talking! 👨‍👩‍👧‍👦💬 Our Moments: Family Edition packs 100 fun, thoughtful, and hilarious conversation starters built to bridge the gap between kids, teens, and parents, sparking stories you’ve never heard before!</p>
-          <a class="pill order" href="#" data-name="OUR MOMENTS Family">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/jvgwzH5L/59c16085-87dd-4467-a0aa-873fe83c63bd.webp" alt="OUR MOMENTS Family" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>OUR MOMENTS Generations</h3>
-          <p class="price">Kshs. 800/-</p>
-          <p class="desc">The ultimate companion for shags visits, Sunday family lunches, and December holiday reunions! 🚗✨ Zero complicated setup just pass the deck around the table and watch grandparents share childhood memories while kids and parents share non-stop laughs.</p>
-          <a class="pill order" href="#" data-name="OUR MOMENTS Generations">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/MDb6rbBF/c5b167b7-6a8d-40e5-9ad8-69b0b3426040.webp" alt="OUR MOMENTS Generations" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BIBLE SEQUENCE</h3>
-          <p class="price">Kshs. 1,500/-</p>
-          <p class="desc">No reading skills required for younger players; just match the illustrated Bible story on your card to the board, place your chip, and race to complete two rows of five! ✨👨‍👩‍👧‍👦 Ideal for family Sundays, youth group hangouts, and thoughtful gifts across every generation.</p>
-          <a class="pill order" href="#" data-name="BIBLE SEQUENCE">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/84mPnF4C/931e92a7-b7da-4d08-b58d-23081dd2fe5f.webp" alt="BIBLE SEQUENCE" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>PARTY CHARADES</h3>
-          <p class="price">Kshs. 1,200/-</p>
-          <p class="desc">No talking, no pointing, and 60 seconds on the clock while your teammates scream the wildest wrong guesses! 🎭⏱️ Party Charades brings non-stop physical comedy to the living room. Act out movies, celebrities, actions, and hilarious phrases before the timer runs out!</p>
-          <a class="pill order" href="#" data-name="PARTY CHARADES">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/fdDk95dG/052e513b-b056-408f-be9f-5d66da53b077.png" alt="PARTY CHARADES" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>What Do You MEME</h3>
-          <p class="price">Kshs. 1,850/-</p>
-          <p class="desc">What Do You Meme? is the hilarious party game where players compete to create the funniest memes! Match caption cards with photo cards to make outrageous combinations and get everyone laughing. Perfect for parties, game nights and unforgettable moments with friends! 😂📸</p>
-          <a class="pill order" href="#" data-name="What Do You Meme">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Q3rL0MTC/412568fa-eff6-49cf-9859-8e50e712252e.png" alt="What Do You Meme" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BEAT THE PARENTS</h3>
-          <p class="price">Kshs. 2,550/-</p>
-          <p class="desc">Think you know your family inside out? Let’s put that to the test. 👀🏠 Do You Really Know Your Family? brings non-stop laughs, hilarious confessions, and wild mini-challenges as parents and kids battle to prove who actually pays attention at home. 😂🔥 Who in your family would win—and who’s getting exposed first? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Beat The Parents">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/39fPBvnQ/fe8d9534-5727-4fca-8cab-389240f012a5.png" alt="Beat The Parents" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>QUIDDLER FOR THE FUN</h3>
-          <p class="price">Kshs. 1,050/-</p>
-          <p class="desc">Warning: This game will cause competitive spelling bees. 🐝🧠 Quidler is the ultimate test of your vocabulary and speed. It starts easy with 3-letter words, but by Round 8, you're sweating over 10-letter anagrams.😓🔠 Who’s the word nerd in your group?</p>
-          <a class="pill order" href="#" data-name="Quiddler">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/NgpmDkrd/f7347c07-276a-4a2f-8d8d-3cdf4dee21b1.png" alt="Quiddler" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>TALKING POINT FAMILY</h3>
-          <p class="price">Kshs. 1,234/-</p>
-          <p class="desc">Trade screen time for real connection. 💬❤️ Talking Point: Family Edition replaces "How was your day?" with 200 fun, thoughtful, and hilarious questions that actually get everyone talking—from the kids to the grandparents. 🏡✨ What’s the funniest story your family always brings up? Drop it below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Talking Point Family">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/1t084SjZ/e4c1c4d0-86f5-46c3-a4e6-060652c7fb0f.png" alt="Talking Point Family" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>CLUE SUSPECT</h3>
-          <p class="price">Kshs. 1,900/-</p>
-          <p class="desc">Trust nobody at the table. 🕵️‍♂️🔍 Clue Suspect packs all the drama, bluffing, and detective work of classic Clue into a fast-paced card game—crack the who, what, and where before your friends throw you off the trail. 🃏🔥 Who’s the best liar in your squad? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Clue Suspect">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/WNw26CJ9/0e1f4399-747d-44c9-8240-0d4626c112fc.png" alt="Clue Suspect" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DO YOU REALLY KNOW YOUR FAMILY</h3>
-          <p class="price">Kshs. 1,300/-</p>
-          <p class="desc">Think you know your family inside out? Let’s put that to the test. 👀🏠 Do You Really Know Your Family? brings non-stop laughs, hilarious confessions, and wild mini-challenges as parents and kids battle to prove who actually pays attention at home. 😂🔥 Who in your family would win—and who’s getting exposed first? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Do You Really Know Your Family">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/bM5XZPBB/ae665474-414a-4b15-b66d-883da66675af.png" alt="Do You Really Know Your Family" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Lyrically Correct</h3>
-          <p class="price">Kshs. 950/-</p>
-          <p class="desc">Don’t just hum the beat—finish the lyrics! 🎤🔥 Lyrically Correct puts your 90s, 2000s, and hip-hop & R&B memory to the ultimate test. Tag someone who always sings the wrong words 👇😂</p>
-          <a class="pill order" href="#" data-name="Lyrically Correct">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Xfq8zRCN/44694772-de63-49aa-afdb-dfd1993bfcc8.png" alt="Lyrically Correct" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>LIAR'S UNO </h3>
-          <p class="price">Kshs. 600/-</p>
-          <p class="desc">Trust nobody at the table. 🔥🤥 Every turn is a staring contest, every card could be a trap, and one false accusation costs you two penalty cards!</p>
-          <a class="pill order" href="#" data-name="LIAR'S UNO">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Wvnkw9JP/e7dc2b9a-e20d-467e-8b31-6dcc0958be68.png" alt="LIAR'S UNO" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Anomia </h3>
-          <p class="price">Kshs. 800/-</p>
-          <p class="desc">Your brain knows the answer—until the timer isn't even needed and your friend shouts it first! ⚡🧠 In Anomia, matching symbols trigger instant head-to-head category battles where the first person to blurt out an answer steals the card!</p>
-          <a class="pill order" href="#" data-name="Anomia">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/mg5w87w/259225fe-354f-405c-91e5-3c54a8fbd9d5.png" alt="Anomia" loading="lazy">
-       </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Do You Really Know Your FRIENDS? </h3>
-          <p class="price">Kshs. 650/-</p>
-          <p class="desc">In Do You Really Know Your Friends?, one person takes the hot seat while everyone else writes down what they think you’d say, and the board reveals spark instant roasts and non-stop laughs!</p>
-          <a class="pill order" href="#" data-name="Do You Really Know Your FRIENDS?">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/s93wSyFN/eebdf339-2539-41d3-9c1d-533a5169fb66.png" alt="Do You Really Know Your FRIENDS?" loading="lazy">
-       </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Monopoly Deal Card Game </h3>
-          <p class="price">Kshs. 650/-</p>
-          <p class="desc">Why wait until month-end to stress over rent when you can charge your friends double rent on a Tuesday night? 🏠💀 One Sly Deal card and suddenly your bestie’s whole property empire belongs to you!</p>
-          <a class="pill order" href="#" data-name="Monopoly Deal Card Game">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/4wn0rc67/c38153f7-1a7f-4c7e-ae4e-a1e0048c9c68.png" alt="Monopoly Deal Card Game" loading="lazy">
-       </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Name 5 </h3>
-          <p class="price">Kshs. 900/-</p>
-          <p class="desc">Easy to learn in 10 seconds, hilarious for hours! 🃏⚡ From "Name 5 things in a fridge" to "Name 5 songs by Beyoncé", Name 5 brings everyone friends, couples, and family into the chaos instantly.</p>
-          <a class="pill order" href="#" data-name="Name 5">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/gFF3TZDY/65cf3597-74de-4bcb-b45b-a0b5ea681037.png" alt="Name 5" loading="lazy">
-       </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Little Talk: Conversation Starters for Kids & Families </h3>
-          <p class="price">Kshs. 1100/-</p>
-          <p class="desc">No tablets, no TV, no rushed routines—just genuine laughs and unexpected answers from the little ones. ✨🃏 Whether it’s 10 minutes before bed or a Sunday afternoon drive, Little Talk helps kids open up, build confidence, and share what’s really on their minds.</p>
-          <a class="pill order" href="#" data-name="Little Talk: Conversation Starters for Kids & Families">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/FvsrCH2/5460384f-1a40-41e8-a196-8587c9b399cc.png" alt="Little Talk: Conversation Starters for Kids & Families" loading="lazy">
-       </article>  
-    </div>
-  </section>
-
-  <!-- ============ BOARD GAMES ============ -->
-  <section class="category" id="board-games">
-    <div class="dice">♠ ♦ ♣ ♥</div>
-    <h2>BOARD GAMES</h2>
-    <p class="intro">Clear the table, silence the phones, and let the real competition begin. From cozy co-op adventures to cutthroat strategy showdowns, our board games turn any hangout into the main event. Roll the dice, claim your territory, and may the best player win (or at least the best trash talker)</p>
-    <div class="items">
-      <article class="item">
-        <div class="item-text">
-          <h3>Ubongo 3D</h3>
-          <p class="price">Kshs. 2,100/-</p>
-          <p class="desc">Ubongo! 3D is an exciting 3D puzzle game that challenges players to think fast, solve puzzles and beat the clock! Race to fit colourful 3D pieces into the correct spaces, building your solution to the required height before time runs out. Perfect for family game nights, puzzle lovers and friendly competition! 🧩⏳🏆</p>
-          <a class="pill order" href="#" data-name="Ubongo 3D">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/xqzm92tV/Ubongo-3-D-Under-Golden-Spotlight.png" alt="Ubongo 3D" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Connect 4</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Connect 4 is the classic two-player strategy game where the goal is to be the first to connect four discs in a row—horizontally, vertically or diagonally! Take turns dropping your coloured discs into the grid, block your opponent’s moves and plan your winning strategy. Simple to learn, exciting to play and perfect for family game nights! 🔴🟡🏆</p>
-          <a class="pill order" href="#" data-name="Connect 4">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/qLFc11fj/99748cae-b3d3-499b-8fcb-ae772950aff3.png" alt="Connect 4" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>MONOPOLY ELECTRONIC BANKING</h3>
-          <p class="price">Kshs. 7,650/-</p>
-          <p class="desc">Paper money is officially cancelled. 💸🚫 Swipe, tap, and bankrupt your friends in high definition with Monopoly: Electronic Banking. No more shady bankers stealing from the tray—every transaction is tracked! 💳😈 Ready to build your empire? Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Monopoly Electronic Banking">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/p6svW2Hk/6cd816d6-6eb3-4d3b-ba6e-b7bfea5e0bfe.png" alt="Monopoly Electronic Banking" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>JENGA</h3>
-          <p class="price">Kshs. 850/-</p>
-          <p class="desc">One wrong move and it’s all over. 🏗️💥 Jenga turns the simplest task into a heart-pounding thriller—especially when everyone is watching and waiting for you to slip up. 👀😈 Who in your squad has the shadiest, shakiest hands? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Jenga">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/1tNFYHnK/c6dddbd1-6b15-421c-aefb-4c00fde9bb63.png" alt="Jenga" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BRAINS CHESS</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Think you’re a chess grandmaster? Prove it. 🧠♟️ Brains Chess flips the classic game into an addictive solo logic puzzle—one wrong move on the board and it’s game over. 👀🔥 Who in your crew is always bragging about their chess skills? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Brains Chess">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/vx3QD6fx/68039ae4-4f81-4abf-81fa-e570df2a1dda.png" alt="Brains Chess" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>SCRABBLE</h3>
-          <p class="price">Kshs. 1,300/-</p>
-          <p class="desc">Spell it. Score it. Own the board. ✍️✨ Whether it’s a chill Sunday afternoon or a heated family showdown, Scrabble never misses. Available now—DM to order! 🎴🔥</p>
-          <a class="pill order" href="#" data-name="Scrabble">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/DDCg235L/e7f2914c-0a7b-4635-9a30-951aa674575e.png" alt="Scrabble" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Tapple Family Word Game</h3>
-          <p class="price">Kshs. 2,200/-</p>
-          <p class="desc">144 categories, 20 letters, and 10 seconds of pure adrenaline! 🔥🃏 Whether it’s Sunday family dinner, an Airbnb weekend, or a loud house party, Tapple takes 15 seconds to learn and gets everyone shouting across the living room.</p>
-          <a class="pill order" href="#" data-name="Tapple Family Word Game">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/mC5kY0ws/620fd5b2-3b26-4f83-81df-bb220f16e886.png" alt="Tapple Family Word Game" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>2 in 1 Scrabble Original and Monopoly</h3>
-          <p class="price">Kshs. 1,600/-</p>
-          <p class="desc">Two timeless classics, one compact box, endless weekend rematches! 🏠✨ Whether it’s a quiet Sunday word battle with family or a ruthless late-night property empire showdown, this 2-in-1 Scrabble & Monopoly set is the ultimate game-night staple and a top-tier gift!</p>
-          <a class="pill order" href="#" data-name="2 in 1 Scrabble Original and Monopoly">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/4wNzP1Kv/22922c26-b967-462d-8311-e171aac81ff1.png" alt="2 in 1 Scrabble Original and Monopoly" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Chinese Checkers</h3>
-          <p class="price">Kshs. 1,550/-</p>
-          <p class="desc">Bright marbles, zero screens, and endless rematches! ✨🎲 Whether it’s a lazy Sunday afternoon with family or a chill coffee-table showdown with friends, Chinese Checkers brings everyone around the board in seconds.</p>
-          <a class="pill order" href="#" data-name="Chinese Checkers">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/DDgM2BdY/dcf33ec3-cbca-4173-b2fb-84383fe61f73.png" alt="Chinese Checkers" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Dart Board</h3>
-          <p class="price">Kshs. 1,550/-</p>
-          <p class="desc">Instant room upgrade, zero setup hassle, and hours of friendly trash talk! 🏆🎯 Hang it in your living room, Airbnb, or office break area our Dart Board Set comes complete with darts, so you’re ready to throw straight out of the box.</p>
-          <a class="pill order" href="#" data-name="Dart Board">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/WNRzy3vZ/House-of-Cards-Dartboard-Poster.png" alt="Dart Board" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Monopoly Junior Kuromi</h3>
-          <p class="price">Kshs. 1,500/-</p>
-          <p class="desc">Looking for the ultimate birthday gift or weekend family game? 🎁🎲 Monopoly Junior: Kuromi Edition is easy for kids ages 5+ to pick up in minutes no complicated math, quick 30-minute rounds, and major Kuromi attitude in every roll of the dice!</p>
-          <a class="pill order" href="#" data-name="Monopoly Junior Kuromi">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/sJV3Tcgn/915503ad-ef0b-4de9-85dc-29ee0236d9c6.png" alt="Monopoly Junior Kuromi" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Monopoly Junior Spider-Man</h3>
-          <p class="price">Kshs. 1,500/-</p>
-          <p class="desc">Looking for the ultimate birthday gift for a young superhero? 🎁🦸‍♂️ Monopoly Junior: Spider-Man Edition takes minutes to learn, keeps kids ages 5+ off screens, and packs big Marvel excitement into quick 30-minute matches the whole family can join!</p>
-          <a class="pill order" href="#" data-name="Monopoly Junior Spider-Man">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/kV7pNbC9/6214d722-7356-43a9-bb3d-c24df3c038e8.png" alt="Monopoly Junior Spider-Man" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Monopoly Junior Cars</h3>
-          <p class="price">Kshs. 1,500/-</p>
-          <p class="desc">Ka-chow! Start your engines and race around Radiator Springs! 🏎️💨 Monopoly Junior: Disney Pixar Cars Edition puts kids in the driver’s seat with custom character tokens Lightning McQueen, Mater, Cruz Ramirez, and Jackson Storm, plus fast, simplified rules made for non-stop racing fun!</p>
-          <a class="pill order" href="#" data-name="Monopoly Junior Cars">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/4wbrD2Bk/45fdb520-6889-4143-a416-a6bad00e08be.png" alt="Monopoly Junior Cars" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Magnetic Checkers set</h3>
-          <p class="price">Kshs. 1,500/-</p>
-          <p class="desc">Compact, sleek, and ready for instant 1-on-1 showdowns! ✨🎲 Folds neatly in half to store all magnetic pieces inside; toss it in your backpack for weekend getaways, campus breaks, or chill family nights at home.</p>
-          <a class="pill order" href="#" data-name="Magnetic Checkers set">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/bMnV14hc/d5e8c088-a462-4b06-b351-464084dc38dc.png" alt="Magnetic Checkers set" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Decrypt Rope Game</h3>
-          <p class="price">Kshs. 1,050/-</p>
-          <p class="desc">Looks simple until you pull the wrong string and make the knot ten times worse! 🪢🤯 In Decrypt Rope Game, race to untangle the crisscrossed elastic ropes one clever move at a time, testing your focus, logic, and patience under pressure!</p>
-          <a class="pill order" href="#" data-name="Decrypt Rope Game">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/ymv75r5R/b8b689dd-4ac0-444a-ad96-75c131b3bed7.png" alt="Decrypt Rope Game" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Magnet Battle Chess Game</h3>
-          <p class="price">Kshs. 1,050/-</p>
-          <p class="desc">Think you've got the moves? Put your strategy to the test! Magnet Battle Chess brings an exciting twist to classic chess, combining magnetic pieces, clever tactics, and mind-bending challenges. Perfect for chess lovers, competitive friends, and anyone who loves a good battle of wits!</p>
-          <a class="pill order" href="#" data-name="Magnet Battle Chess Game">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/hFNp9Jkf/cfff8553-c6ba-44e8-aaba-77601aefebfd.png" alt="Magnet Battle Chess Game" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Monopoly Ultimate Banking</h3>
-          <p class="price">Kshs. 4,500/-</p>
-          <p class="desc">Classic Monopoly upgraded for the contactless era! 🏠✨ With Event cards that shake up rent prices instantly and tap-to-pay bank cards that speed up every turn, Monopoly Ultimate Banking keeps family weekends and late-night squad showdowns moving fast from start to bankruptcy.</p>
-          <a class="pill order" href="#" data-name="Monopoly Ultimate Banking">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/Ps8C1PFj/5c9e8cf6-4c4f-4bad-8e9f-03d3e7e521cd.png" alt="Monopoly Ultimate Banking" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Table Game Series Football Game</h3>
-          <p class="price">Kshs. 3,500/-</p>
-          <p class="desc">Compact, screen-free, and built for non-stop rematches! 🏆⚽ Whether you’re settling scores during halftime, keeping football-loving kids entertained all weekend, or upgrading your living room chill zone, this Tabletop Football Game turns any table into a mini pitch.</p>
-          <a class="pill order" href="#" data-name="Table Game Series Football Game">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/Kc8fsMvP/a8cc94e9-dba9-46da-a4a6-97b167a19468.png" alt="Table Game Series Football Game" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>4 in 1 Chess Set</h3>
-          <p class="price">Kshs. 1,900/-</p>
-          <p class="desc">One compact box, zero screens, and endless weekend rematches! ✨🏆 Whether you’re packing for an Airbnb getaway, upgrading your coffee table, or shopping for a timeless gift, this 4-in-1 Chess Set keeps every player at the table entertained from beginner to grandmaster.</p>
-          <a class="pill order" href="#" data-name="4 in 1 Chess Set">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/DgzYYg2h/7ce7bfa2-7172-4ce5-bd80-8a1383853993.png" alt="4 in 1 Chess Set" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Wooden Education toy set</h3>
-          <p class="price">Kshs. 2,200/-</p>
-          <p class="desc">Smooth edges, vibrant non-toxic colours, and built to last through years of playtime! 🎁🧸 Whether it’s a thoughtful birthday gift, a rainy-day playroom staple, or quality parent-child bonding time, this Wooden Educational Toy Set sparks creativity and problem-solving from day one.</p>
-          <a class="pill order" href="#" data-name="Wooden Education toy set">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/nNqv6FVp/d5effdfc-754e-40e0-a89e-30339ca7fb3b.png" alt="Wooden Education toy set" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Color Ball Challenge</h3>
-          <p class="price">Kshs. 1,200/-</p>
-          <p class="desc">Bright colors, zero screens, and instant family competition! ✨🎲 Easy enough for kids to grasp in seconds yet packed with sneaky strategy for adults, Color Ball Challenge brings hands-on color-matching fun straight to your weekend living room or birthday gift list.</p>
-          <a class="pill order" href="#" data-name="Color Ball Challenge">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/whpQtQqs/d40f14d4-45fc-4207-a976-e699232fcab8.png" alt="Color Ball Challenge" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Sequence</h3>
-          <p class="price">Kshs. 1,500/-</p>
-          <p class="desc">Easy enough for beginners, intense enough for serious strategists! 🎯♠️ Play solo or team up 2-on-2. Sequence blends luck of the draw with pure tactical planning, making it the ultimate crowd-pleaser for family weekends, double dates, and loud house parties.</p>
-          <a class="pill order" href="#" data-name="Sequence">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/J9Q3RQ8/f6ced65b-38b8-4f2b-ab3e-22a538354c3e.png" alt="Sequence" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Sequence Dice Games</h3>
-          <p class="price">Kshs. 1,750/-</p>
-          <p class="desc">Love classic Sequence? Wait until you roll the dice! 🎲🔥 In Sequence Dice, roll to claim numbers on the board, trigger bonus turns with 2s and 12s, or roll a 10 to remove your opponent’s chip right before they connect five in a row! Tag the friend whose lucky dice rolls always save them at the last minute 👇😂</p>
-          <a class="pill order" href="#" data-name="Sequence Dice Games">Order Now</a>
-        </div>
-       <img src="https://i.ibb.co/60QTzYgL/87d5f0b5-4aa0-425a-8acc-cc0e975694bb.png" alt="Sequence Dice Games" loading="lazy">
-      </article>  
-    </div>
-  </section>
-
-  <!-- ============ ADULT PARTY GAMES (18+) ============ -->
-  <section class="category adult locked" id="adult-section">
-    <div class="dice">♠ ♦ ♣ ♥</div>
-    <h2>ADULT PARTY GAMES (18+)</h2>
-    <h4 class="subtitle">Dark and classy</h4>
-    <p class="intro">The night is young, and so is the deck. Bold games for grown-ups, made for late nights, loud laughs and stories you’ll swear you don’t remember. 18+ only. Play smart, drink responsibly.</p>
-
-    <div class="adult-wrap">
-      <div class="age-gate" id="age-gate">
-        <p>This section is for adults only.</p>
-        <button type="button" class="pill" id="open-confirm">Confirm I am 18 or older</button>
-      </div>
-
-      <!-- "inert" keeps locked games from being clicked or tabbed to -->
-      <div class="items blur-content" id="adult-games" inert>
-      <article class="item">
-        <div class="item-text">
-          <h3>Drunken Tower</h3>
-          <p class="price">Kshs. 2,300/-</p>
-          <p class="desc">Pull. Play. Drink. Don't let it fall! 😈 Get ready for wild challenges, hilarious moments and unforgettable game nights. 🥃🔥</p>
-          <a class="pill order" href="#" data-name="Drunken Tower">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/B2h4q64b/Luxury-Drunken-Tower-Game-Poster.png" alt="Drunken Tower" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BEDROOM COMMANDS</h3>
-          <p class="price">Kshs. 1,300/-</p>
-          <p class="desc">"What do you want to do tonight?" problem officially solved. 💀🔥 Let the cards make the rules with Bedroom Commands. Perfect for anniversaries, staycations, or turning a regular Friday into something wild. 🥂😈 Grab yours today!</p>
-          <a class="pill order" href="#" data-name="Bedroom Commands">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/JWPFLbbr/fe9e1eae-ee93-4797-a3c0-e491743be041.webp" alt="Bedroom Commands" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Drunk Stoned Or Stupid</h3>
-          <p class="price">Kshs. 1,300/-</p>
-          <p class="desc">Point fingers. Expose your friends. Start the chaos! 😈 Find out who’s most likely to do the wildest things. Don't let your next game night be boring! Order Drunk Stoned or Stupid NOW from House of Cards and bring the chaos home! 🃏🍻</p>
-          <a class="pill order" href="#" data-name="Drunk Stoned Or Stupid">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/hFg20Tkd/e23022bb-685a-4702-8909-b724232fc8ad.png" alt="Drunk Stoned Or Stupid" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Risk It or Drink It</h3>
-          <p class="price">Kshs. 1,700/-</p>
-          <p class="desc">Risk It or Drink It 🍻🔥 Take the risk or take a sip! 😈 Face outrageous challenges, make bold moves and see who’s brave enough to play. Don't just watch the fun happen! Order yours from House of Cards NOW and turn up the heat on game night! 🃏🥃</p>
-          <a class="pill order" href="#" data-name="Risk It or Drink It">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/qLR9KtfN/f7b9d842-dbd6-48f1-9ff9-5be3ddc5a2cd.png" alt="Risk It or Drink It" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DO or DRINK Win Or Blackout</h3>
-          <p class="price">Kshs. 1,300/-</p>
-          <p class="desc">Dare to do it or take the drink! 😈 No excuses. No backing out. Just wild challenges and nonstop chaos! BUY NOW at House of Cards and bring the madness to game night! 🃏🥃</p>
-          <a class="pill order" href="#" data-name="Do or Drink Win Or Blackout">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/8gLDdsrm/Do-or-Drink-Play-Drink-Repeat.png" alt="Do or Drink Win Or Blackout" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DO Or DRINK Expansion Pack 1</h3>
-          <p class="price">Kshs. 850/-</p>
-          <p class="desc">Ready to ketchup with your friends and spill the tea? ☕ The chaos has officially bean multiplied with Expansion Pack 1. It’s time to stop being so chicken and face the consequences. If you can't take the heat, lettuce tell you, this pack is not for the faint of heart. You’ll be grapeful for an excuse to drink, but this deck is nacho average game night—it’s about to get savage. 😈🔥 Best served with a stiff drink. 🍻 Grab yours today and get the party poppin'! 🍿🚚💨</p>
-          <a class="pill order" href="#" data-name="Do Or Drink Expansion Pack 1">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/YBtby5nH/80dbd211-7977-441e-943f-0352c294d4ef.png" alt="Do Or Drink Expansion Pack 1" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BUZZED: BATTLE</h3>
-          <p class="price">Kshs. 1,150/-</p>
-          <p class="desc">The party was getting a little dry, so we decided to add more fuel to the fire. 🔥 The First Expansion Pack has officially arrived, and it’s time to stop wine-ing and start drinking. 🍷 This deck is un-beer-lievably savage, packed with brand new rules that will have you foaming at the mouth and making pour decisions all night. 🍻</p>
-          <a class="pill order" href="#" data-name="Buzzed">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/JRS8WWr4/66de5076-971b-4eb1-aeb2-d32a6fdae56d.png" alt="Buzzed" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>First &amp; Last</h3>
-          <p class="price">Kshs. 1,100/-</p>
-          <p class="desc">Order matters. Chaos guaranteed. 🃏🔥 Put your pop culture and historical timeline knowledge to the test with First and Last. Available now—DM to order! 🎴✨</p>
-          <a class="pill order" href="#" data-name="First and Last">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Q7LF6kM2/1e5b82d4-a6f7-4dc1-b9d8-b8ad41654689.png" alt="First and Last" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Talk, Flirt, Dare</h3>
-          <p class="price">Kshs. 1,400/-</p>
-          <p class="desc">Three decks. One box. Zero awkward silences. 🔥🃏 From real talk to bold dares, Talk, Flirt, Dare has something for everyone. Available now—DM to order! 🎴✨</p>
-          <a class="pill order" href="#" data-name="Talk, Flirt, Dare">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/F41JNB4G/9fe178d2-61cc-42ff-a922-0e6a9d618466.webp" alt="Talk, Flirt, Dare" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DRUNK DESIRES</h3>
-          <p class="price">Kshs. 1,200/-</p>
-          <p class="desc">Liquid courage meets zero filter. 🥃🔥 Drunk Desires turns regular pre-games into legendary nights—spill your wildest secrets, complete the dare, or drink up. 😈👀 Who in your crew is folding on round one? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Drunk Desires">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/tPmcXnWv/48e7cb2d-fa18-4b7b-869f-912a3435c572.png" alt="Drunk Desires" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DO Or DRINK Expansion Pack #2</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Thought you survived the original deck? Think again. 😈🥃 DO or DRINK Expansion Pack #2 brings 100 fresh ways to expose your friends, ruin reputations, and empty every bottle in the room. 🔥👀 Who in your squad is too scared to shuffle this in? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Do Or Drink Expansion Pack #2">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/spngdMSf/3ccc53a4-13a2-4eec-80be-7c83ed602b7b.png" alt="Do Or Drink Expansion Pack #2" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DO Or SMOKE</h3>
-          <p class="price">Kshs. 2,400/-</p>
-          <p class="desc">Pass the lighter, pull a card, and pray you don’t get exposed. 💨🔥 Do or Smoke is the ultimate chill-session upgrade—complete the wild dare or take a hit, zero skips allowed. 😈🃏 Who in your crew is folding on the very first card? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Do Or Smoke">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Z1WSLW9C/12de4ae9-8ad6-4668-a019-be5ebd79efe2.png" alt="Do Or Smoke" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>50 POSITION OF BONDAGE</h3>
-          <p class="price">Kshs. 1,100/-</p>
-          <p class="desc">50 ways to lose control—and love every second of it. 🔗🔥 Whether you’re a beginner testing the waters or ready to turn date night all the way up, 50 Positions of Bondage takes the guesswork out of getting tied up. 😈🖤 Ready to unlock all 50? Discreet, countrywide delivery is on standby! 📦✨</p>
-          <a class="pill order" href="#" data-name="50 Positions of Bondage">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/gXfnT2k/4e053fbc-d697-4b8a-9dc8-18c76f9d8ee4.png" alt="50 Positions of Bondage" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>SPIN THE BOTTLE</h3>
-          <p class="price">Kshs. 2,100/-</p>
-          <p class="desc">Not your high school basement version. 😈🥃 Spin the Bottle is all grown up—give it a flick and let fate decide who’s taking a shot, spilling a secret, or completing a wild dare. 🎯🔥 Who in your squad is getting targeted all night? Tag them below! 👇 Countrywide delivery on standby! 🚚💨</p>
-          <a class="pill order" href="#" data-name="Spin The Bottle">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/4Zd5XHSS/7347037f-4590-4737-be0b-9e434e870570.png" alt="Spin The Bottle" loading="lazy">
-      </article>
-<article class="item">
-        <div class="item-text">
-          <h3>Couple Reconnect</h3>
-          <p class="price">Kshs. 1,100/-</p>
-          <p class="desc">Whether you’re celebrating an anniversary, planning a weekend staycation, or keeping the spark alive at home, Couple Reconnect takes you beyond small talk into the moments, memories, and desires that matter most. ✨🖤</p>
-          <a class="pill order" href="#" data-name="Couple Reconnect">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/WNr5wckK/fa8576db-a701-4147-94d9-41a123e7d723.png" alt="Couple Reconnect" loading="lazy">
-      </article>
-<article class="item">
-        <div class="item-text">
-          <h3>Drunk In Love X-Rated</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Forget boring dinner dates—bring the heat straight to your living room or weekend Airbnb! 🕯️🥂 Whether it’s an anniversary surprise, a staycation essential, or a spicy Friday night at home, Drunk In Love X-Rated guarantees laughs, shots, and serious chemistry.</p>
-          <a class="pill order" href="#" data-name="Drunk In Love X-Rated">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/zWpf22sP/7ebd9fba-2354-4b91-a6d7-97b3039b49e2.png" alt="Drunk In Love X-Rated" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Our Moments Couples</h3>
-          <p class="price">Kshs. 800/-</p>
-          <p class="desc">Compact enough to slip into your bag for coffee dates, road trips, and weekend staycations! 🥂✨ Our Moments: Couples turn quiet dinners and cosy living-room evenings into hours of laughter, shared memories, and meaningful stories you’ve never told before.</p>
-          <a class="pill order" href="#" data-name="Our Moments Couples">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/jZxgH8sm/951c0e7a-fd92-4a73-ba76-736160da4500.png" alt="Our Moments Couples" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>The Ultimate Game For Couples</h3>
-          <p class="price">Kshs. 950/-</p>
-          <p class="desc">Think you know your partner inside out? Put your relationship to the ultimate test! ❤️🔥 The Ultimate Game For Couples blends hilarious trivia, playful challenges, and deep conversation prompts that will have you both laughing, debating, and learning brand-new things about each other! Tag your partner and drop a 🏆 if you’re confident you’d win this round!</p>
-          <a class="pill order" href="#" data-name="The Ultimate Game For Couples">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/bgJZ3d8T/dada84a4-2ba4-447d-9f20-a4cad56ec617.png" alt="The Ultimate Game For Couples" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>S#!% HAPPENS</h3>
-          <p class="price">Kshs. 950/-</p>
-          <p class="desc">Zero filter, dark humour, and heated debates over what counts as a true 100/100 disaster! 🍻🃏 Easy to learn in 60 seconds and guaranteed to have the whole room crying with laughter, Shit Happens is the ultimate icebreaker for Friday night hangouts and weekend Airbnbs.</p>
-          <a class="pill order" href="#" data-name="S#!% HAPPENS">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Gf7Q8YJd/4923d5c7-b135-4b4c-b8c7-fd5f8b0e72b6.png" alt="S#!% HAPPENS" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>TRUTH or DRINK</h3>
-          <p class="price">Kshs. 2,550/-</p>
-          <p class="desc">Four decks of questions ranging from chill icebreakers to "After Dark" chaos! 🔥🥂 Whether it’s a Friday night pre-game, a couples' night in, or a weekend Airbnb with the squad, Truth or Drink guarantees exposed secrets, loud laughs, and empty glasses.</p>
-          <a class="pill order" href="#" data-name="TRUTH or DRINK">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/vCjfVNR8/bc75c1bf-28d9-4c5d-a5fe-2bf8c6813b62.png" alt="TRUTH or DRINK" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>NEVER HAVE I EVER</h3>
-          <p class="price">Kshs. 2,550/-</p>
-          <p class="desc">Zero setup, instant chaos, and stories you’ll be laughing about all year! 🔥🥂 Packed with hundreds of relatable, savage, and unexpected prompts, Never Have I Ever turns any chill hangout, birthday pre-game, or road trip into an unforgettable confession session.</p>
-          <a class="pill order" href="#" data-name="NEVER HAVE I EVER">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/QRM9Y50/b12b90e6-9c36-4ffa-bdac-76ebc51910f8.png" alt="NEVER HAVE I EVER" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Love Lingual</h3>
-          <p class="price">Kshs. 950/-</p>
-          <p class="desc">Whether you’re newly dating, celebrating an anniversary, or planning a cozy weekend staycation, Love Lingual turns any dinner table or living room into a distraction-free zone for real connection. 🕯️🥂 Compact enough for road trips and timeless enough to replay all year!</p>
-          <a class="pill order" href="#" data-name="Love Lingual">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Z1Jr7Q6w/f9048786-f20f-42a0-af78-a625f9504e0b.png" alt="Love Lingual" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>Truth or Dare For Couples</h3>
-          <p class="price">Kshs. 800/-</p>
-          <p class="desc">Skip the predictable dinner routine and bring the excitement straight home! 🕯️🥂 Whether it’s an anniversary surprise, a weekend Airbnb getaway, or a Friday night stay-in, Truth or Dare For Couples keeps you both laughing, flirting, and connecting all night long.</p>
-          <a class="pill order" href="#" data-name="Truth or Dare For Couples">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/FkT8SF0x/198a9f3e-0a19-4682-9f8f-7ebd7f2e59e5.png" alt="Truth or Dare For Couples" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>DIRTY MINDS</h3>
-          <p class="price">Kshs. 1,800/-</p>
-          <p class="desc">The dirtier your mind, the worse you’ll play! 😈🙈 Dirty Minds gives you three super suggestive, borderline X-rated clues, only for the real answer to be something totally innocent like a banana, a toothbrush, or a vacuum cleaner! Tag the friend whose mind goes straight into the gutter every single time 👇😂</p>
-          <a class="pill order" href="#" data-name="DIRTY MINDS">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/Q7n9nmhK/Gemini-Generated-Image-37g3rs37g3rs37g3.jpg" alt="DIRTY MINDS" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BUZZED</h3>
-          <p class="price">Kshs. 950/-</p>
-          <p class="desc">Zero setup, no winners or losers—just 180 cards designed to expose your entire friend group one sip at a time! 🥂👀 Draw a Buzzed card, read the "Drink if..." prompt out loud, and watch everyone guilty slowly reach for their glass!</p>
-          <a class="pill order" href="#" data-name="BUZZED">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/8n3rYSnq/2840b373-1eec-4a4f-aef9-6fa67a878e07.png" alt="BUZZED" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>INTIMACY</h3>
-          <p class="price">Kshs. 1,050/-</p>
-          <p class="desc">Real intimacy starts with asking the right questions! ❤️💬 The BestSelf Intimacy Deck features 150 thoughtfully crafted prompts across Intimacy, Past, Relationship, About You, Life, and Random, sparking meaningful talks, vulnerability, and stronger connection on every date night.</p>
-          <a class="pill order" href="#" data-name="INTIMACY">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/zVpvWBNg/387db7de-efd8-47c1-96a1-186348dabb08.png" alt="INTIMACY" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BESTSELF INTIMACY</h3>
-          <p class="price">Kshs. 1,050/-</p>
-          <p class="desc">Whether you’re newly dating, planning a weekend staycation, or shopping for a thoughtful anniversary or bridal shower gift, the BestSelf Intimacy Deck turns any dinner table or living room into a phone-free zone for genuine closeness. 🕯️🥂</p>
-          <a class="pill order" href="#" data-name="BESTSELF INTIMACY">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/4gX7JkLJ/05417c02-534a-4de4-b5ec-1796804cf1ee.png" alt="BESTSELF INTIMACY" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BESTSELF ICEBREAKER</h3>
-          <p class="price">Kshs. 1,050/-</p>
-          <p class="desc">Hello unforgettable conversations! 💬🔥 The BestSelf Icebreaker Deck packs 150 thought-provoking, funny, and unexpected prompts across Life, Experiences, Random, Would You Rather, Deep, and Personal to spark instant connection at any table!</p>
-          <a class="pill order" href="#" data-name="BESTSELF ICEBREAKER">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/1Jp10PRw/17b60227-1ea2-4cd3-9ca4-0ee650e1c478.png" alt="BESTSELF ICEBREAKER" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>LET'S FOOL AROUND</h3>
-          <p class="price">Kshs. 1,000/-</p>
-          <p class="desc">Ready to turn up the heat on your next date night? 🔥😏 Let’s Fool Around brings bold truths, steamy dares, and playful challenges straight to your bedroom or living room, built to break routines, spark chemistry, and keep you both laughing and blushing all night!</p>
-          <a class="pill order" href="#" data-name="LET'S FOOL AROUND">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/bMQmHsBb/1cb3ddd2-b7d7-4015-9a39-9a59c6a8eaff.png" alt="LET'S FOOL AROUND" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>SEXMATE</h3>
-          <p class="price">Kshs. 1,300/-</p>
-          <p class="desc">Ready to take your nights in from routine to unforgettable? 🔥💋 Sexmate is the ultimate 18+ couples' card game packed with steamy prompts, bold dares, and sensual challenges designed to unlock new fantasies and crank up the chemistry between you and your partner!</p>
-          <a class="pill order" href="#" data-name="SEXMATE">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/ksJG6sV2/62933874-48c1-4a24-88e3-0aa85bbd578d.png" alt="SEXMATE" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BAD PEOPLE</h3>
-          <p class="price">Kshs. 1,850/-</p>
-          <p class="desc">You finally get to find out what your friends really think of you! 😈🃏 In Bad People, one player reads a savage prompt like "Who is most likely to fake their own death to get out of a chama?" and everyone secretly votes on which friend at the table fits it best!</p>
-          <a class="pill order" href="#" data-name="BAD PEOPLE">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/cSLM40KX/de1be6e4-b370-4f49-b068-64127801a3e3.png" alt="BAD PEOPLE" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>BAD CHOICES</h3>
-          <p class="price">Kshs. 1,850/-</p>
-          <p class="desc">Think Never Have I Ever, except you choose who has to answer and if they say YES, you get closer to winning! 😈🃏 In Bad Choices, pick a savage question card from your hand, target the friend you know is guilty, and watch them try to keep a straight face while spilling their wildest secrets!</p>
-          <a class="pill order" href="#" data-name="BAD CHOICES">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/hxTQ0bmZ/Gemini-Generated-Image-tdd0p1tdd0p1tdd0.jpg" alt="BAD CHOICES" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>YOU LAUGH YOU DRINK</h3>
-          <p class="price">Kshs. 1,850/-</p>
-          <p class="desc">In You Laugh You Drink, one player draws a card and has 30 seconds to make everyone else crack up using absurd accents, terrible impressions, and outrageous prompts. Even a tiny smirk costs you a sip!</p>
-          <a class="pill order" href="#" data-name="YOU LAUGH YOU DRINK">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/TqNP5Cw6/6a813a7f-64b1-4e33-aff4-2fa23487b0d1.webp" alt="YOU LAUGH YOU DRINK" loading="lazy">
-      </article>
-      <article class="item">
-        <div class="item-text">
-          <h3>WE'RE NOT REALLY STRANGERS</h3>
-          <p class="price">Kshs. 2,850/-</p>
-          <p class="desc">Strangers today, unforgettable conversations tomorrow. 👀 Get ready to go beyond small talk, ask the questions that matter, uncover hidden truths, and create connections that go deeper than words. Because sometimes, the best way to get closer is to ask one more question. ❤️</p>
-          <a class="pill order" href="#" data-name="WE'RE NOT REALLY STRANGERS">Order Now</a>
-        </div>
-        <img src="https://i.ibb.co/spMXyLdR/a0f939d2-9e3f-4b30-b153-7e42f628c191.webp" alt="WE'RE NOT REALLY STRANGERS" loading="lazy">
-      </article>   
-      </div>
-    </div>
-  </section>
-
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No games match that. Try another name, or ask us on WhatsApp.</p>
 </main>
 
-<!-- ============ DELIVERY BANNER ============ -->
+<section class="how" id="how">
+  <h2>How ordering works</h2>
+  <ol>
+    <li>Pick a game and tap <b>Order</b>.</li>
+    <li>WhatsApp opens with the game name filled in. Send it.</li>
+    <li>We confirm stock, delivery and payment with you.</li>
+  </ol>
+  <p id="info"></p>
+</section>
+
 <section class="banner">
-  <div class="dice">♠ ♦ ♣ ♥</div>
-  <p>Enjoy countrywide delivery on standby.</p>
-  <h2>Ready For Game Night?</h2>
-  <a class="pill" href="#card-games">View All Available Card And Board Games</a>
+  <div class="suits">♠ ♦ ♣ ♥</div>
+  <h2>Ready for game night?</h2>
+  <a class="btn" href="#games">See all games</a>
 </section>
 
 <footer class="site-footer">
-  <h2>Can’t find a game? Ask us.</h2>
-  <a class="pill order-link" href="#">Chat With Us On WhatsApp</a>
-  <p>Copyright © 2026 House Of Cards</p>
+  <h2>Can't find a game? Ask us.</h2>
+  <a class="btn" data-wa href="#">Chat with us on WhatsApp</a>
+  <p>&copy; 2026 House of Cards</p>
 </footer>
 
 <a class="to-top" href="#top" aria-label="Back to top">^</a>
-<a class="wa-float order-link" href="#">💬 <span>Need help? Chat with us</span></a>
+<a class="wa-float" data-wa href="#" aria-label="Chat with us on WhatsApp">💬 <span>Need help? Chat with us</span></a>
 
-<!-- ============ 18+ CONFIRMATION DIALOG ============ -->
-<dialog id="age-dialog">
-  <h2>Age confirmation</h2>
-  <p>Are you 18 years of age or older?</p>
-  <div class="dialog-actions">
-    <button type="button" class="pill" id="confirm-yes">Yes, I am 18+</button>
-    <button type="button" class="pill pill-grey" id="confirm-no">No</button>
+<dialog id="age">
+  <h2>Are you 18 or older?</h2>
+  <p>The adult section has games meant for grown-ups only.</p>
+  <div class="row">
+    <button class="btn" id="yes">Yes, I'm 18+</button>
+    <button class="btn btn-ghost" id="no">No</button>
   </div>
 </dialog>
 
 <script>
-  // WhatsApp number in international format (no +, no spaces, no leading 0).
-  const WHATSAPP_NUMBER = "254717706729";
+// ===== EDIT THIS FILE to change products, prices and contact details =====
+const SITE = {
+  usePhotos: false,           // set to true once your real photos are in the "images" folder
+  whatsapp: "254717706729",   // international format, no + or spaces
+  delivery: "",               // e.g. "Nairobi: Kshs 300, 1 day. Other towns: courier, 2-4 days."
+  payment: ""                 // e.g. "M-Pesa Till 123456, pay on confirmation."
+};
 
-  const waBase = "https://wa.me/" + WHATSAPP_NUMBER + "?text=";
-  document.querySelectorAll("a.order").forEach(a => {
-    a.href = waBase + encodeURIComponent("Hi House Of Cards, I would like to order: " + a.dataset.name);
+// To change a price, edit the number. To add a game, copy a line and change it.
+// c = card game, b = board game, a = adult (18+). Arguments: name, price, image, description
+const I = "https://i.ibb.co/";
+// Two pictures per game:
+//   1) your real photo  -> images/<game-name>.jpg   (e.g. images/uno-flip.jpg)
+//   2) the gold poster  -> images/<game-name>-poster.<ext>, or the ImgBB link below if that file is missing
+// While SITE.usePhotos is false, only the poster shows.
+const slug = (s) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const mk = (cat) => (name, price, img, desc) => ({ cat, name, price, img: I + img, photo: "images/" + slug(name) + ".jpg", posterLocal: "images/" + slug(name) + "-poster." + img.split(".").pop(), desc });
+const c = mk("card"), b = mk("board"), a = mk("adult");
+
+const PRODUCTS = [
+  // ---------- CARD GAMES ----------
+  c("UNO", 500, "0jRfQypN/Gemini-Generated-Image-y2iig4y2iig4y2ii.jpg", `No game night is ever truly complete without the card deck that tests every friendship in the room! Match colors, drop Reverse cards at the worst possible moment, stack that ruthless +4, and don’t forget to yell "UNO!" before anyone catches you!`),
+  c("UNO Flip", 500, "JWcvQRX6/f3e55d76-26eb-47f5-9773-857ba43ca8f1.png", `UNO Flip! is a thrilling twist on the classic UNO game! With double-sided cards, players can flip the deck from Light Side to Dark Side, bringing tougher penalties, surprises and exciting new challenges. Be the first to play all your cards and claim victory!`),
+  c("UNO Dare", 500, "ZymZnfh/7beee72f-6958-4090-941d-5c7d6018fd0c.png", `UNO Dare! takes the classic UNO game to another level with exciting dares and unexpected challenges! Play your cards, challenge your friends, and choose between completing a dare or facing a penalty. It's the perfect mix of strategy, laughter and friendly competition!`),
+  c("Giant UNO BTS", 600, "4qqpfZb/8253bcaa-0056-45af-8043-0116110a5b87.png", `UNO BTS brings the excitement of the classic UNO card game together with the global sensation BTS! Featuring BTS-themed cards and special designs inspired by the iconic group, this edition is perfect for ARMY fans who love fun, friendly competition and unforgettable game nights.`),
+  c("UNO Flex", 600, "Hfjn7Djs/Gemini-Generated-Image-6jo47u6jo47u6jo4.jpg", `Think you’re safe with one card left? Watch your friend flip the whole game on its head! UNO Flex upgrades classic UNO with special Flex Cards that let you switch a card’s color on the spot, plus Power Cards that turn a simple "Draw Two" into a massive draw for every single player at the table!`),
+  c("UNO No Mercy", 600, "Kx6gF2WZ/Gemini-Generated-Image-8nuoeg8nuoeg8nuo.jpg", `Forget +4, say hello to +6, +10, and stacking draw penalties until someone gets eliminated on the spot! UNO Show ’em No Mercy is the most ruthless UNO ever made: stack cards, swap entire hands, and if you ever hit 25 cards in your hand, you’re officially out of the game!`),
+  c("UNO Party", 600, "jvJbnL9N/Gemini-Generated-Image-bag1erbag1erbag1.jpg", `Why leave half the room watching when up to 16 players can jump into the madness at once?! UNO Party cranks up classic UNO with Point Taken (everyone points at one victim who draws that many cards!), Wild Drawn Together (linking two players' fates!), and lightning-fast Speed Play!`),
+  c("DOS", 600, "rGjHpnYy/Gemini-Generated-Image-b4huicb4huicb4hu.jpg", `You’ve mastered yelling "UNO!" now get ready for twice the speed, twice the piles, and yelling "DOS!" In DOS, players match numbers across two center discard piles, trigger Double Color Match bonuses to force opponents to draw, and race to clear their hand first!`),
+  c("Say What You Meme", 1600, "ds6H6xrT/Gemini-Generated-Image-4lmmsu4lmmsu4lmm.jpg", `Packed with hundreds of relatable caption cards and iconic internet reaction photos (plus a mini easel to display the meme of the round)! Zero setup, instant laughs, and zero filter. What Do You Meme? turns any Friday night hangout or weekend road trip into nonstop comedy.`),
+  c("Get ChurchED", 1000, "TBTsMFB9/Gemini-Generated-Image-ooiqf3ooiqf3ooiq.jpg", `Finally, a party card game you can play with your youth group, chama, family, and church crew without skipping a single card! Easy to learn in seconds and packed with replayable rounds, Get ChurchED brings non-stop energy to Sunday afternoons, road trips, and fellowship nights.`),
+  c("Codenames Pictures", 1000, "xtQ5xc8k/337a1b7c-4a06-4e33-a7fe-a0dc7098a824.webp", `Easy to learn in 3 minutes and endlessly replayable for 4 to 8+ players! Because every picture card packs multiple visual twists, Codenames Pictures works brilliantly for mixed-age family game nights, office team-building, and competitive Friday night hangouts.`),
+  c("Our Moments Family", 800, "jvgwzH5L/59c16085-87dd-4467-a0aa-873fe83c63bd.webp", `Put the tablets, phones, and TV remotes aside and get the whole living room talking! Our Moments: Family Edition packs 100 fun, thoughtful, and hilarious conversation starters built to bridge the gap between kids, teens, and parents, sparking stories you’ve never heard before!`),
+  c("Our Moments Generations", 800, "MDb6rbBF/c5b167b7-6a8d-40e5-9ad8-69b0b3426040.webp", `The ultimate companion for shags visits, Sunday family lunches, and December holiday reunions! Zero complicated setup, just pass the deck around the table and watch grandparents share childhood memories while kids and parents share non-stop laughs.`),
+  c("Bible Sequence", 1500, "84mPnF4C/931e92a7-b7da-4d08-b58d-23081dd2fe5f.webp", `No reading skills required for younger players; just match the illustrated Bible story on your card to the board, place your chip, and race to complete two rows of five! Ideal for family Sundays, youth group hangouts, and thoughtful gifts across every generation.`),
+  c("Party Charades", 1200, "fdDk95dG/052e513b-b056-408f-be9f-5d66da53b077.png", `No talking, no pointing, and 60 seconds on the clock while your teammates scream the wildest wrong guesses! Party Charades brings non-stop physical comedy to the living room. Act out movies, celebrities, actions, and hilarious phrases before the timer runs out!`),
+  c("What Do You Meme", 1850, "Q3rL0MTC/412568fa-eff6-49cf-9859-8e50e712252e.png", `What Do You Meme? is the hilarious party game where players compete to create the funniest memes! Match caption cards with photo cards to make outrageous combinations and get everyone laughing. Perfect for parties, game nights and unforgettable moments with friends!`),
+  // FIX ME: the description below was copied from "Do You Really Know Your Family". Replace it with the real one.
+  c("Beat The Parents", 2550, "39fPBvnQ/fe8d9534-5727-4fca-8cab-389240f012a5.png", `Think you know your family inside out? Let’s put that to the test. Do You Really Know Your Family? brings non-stop laughs, hilarious confessions, and wild mini-challenges as parents and kids battle to prove who actually pays attention at home.`),
+  c("Quiddler", 1050, "NgpmDkrd/f7347c07-276a-4a2f-8d8d-3cdf4dee21b1.png", `Warning: this game will cause competitive spelling bees. Quiddler is the ultimate test of your vocabulary and speed. It starts easy with 3-letter words, but by Round 8, you're sweating over 10-letter anagrams. Who’s the word nerd in your group?`),
+  c("Talking Point Family", 1234, "1t084SjZ/e4c1c4d0-86f5-46c3-a4e6-060652c7fb0f.png", `Trade screen time for real connection. Talking Point: Family Edition replaces "How was your day?" with 200 fun, thoughtful, and hilarious questions that actually get everyone talking, from the kids to the grandparents.`),
+  c("Clue Suspect", 1900, "WNw26CJ9/0e1f4399-747d-44c9-8240-0d4626c112fc.png", `Trust nobody at the table. Clue Suspect packs all the drama, bluffing, and detective work of classic Clue into a fast-paced card game. Crack the who, what, and where before your friends throw you off the trail.`),
+  c("Do You Really Know Your Family", 1300, "bM5XZPBB/ae665474-414a-4b15-b66d-883da66675af.png", `Think you know your family inside out? Let’s put that to the test. Do You Really Know Your Family? brings non-stop laughs, hilarious confessions, and wild mini-challenges as parents and kids battle to prove who actually pays attention at home.`),
+  c("Lyrically Correct", 950, "Xfq8zRCN/44694772-de63-49aa-afdb-dfd1993bfcc8.png", `Don’t just hum the beat, finish the lyrics! Lyrically Correct puts your 90s, 2000s, and hip-hop & R&B memory to the ultimate test.`),
+  c("Liar's UNO", 600, "Wvnkw9JP/e7dc2b9a-e20d-467e-8b31-6dcc0958be68.png", `Trust nobody at the table. Every turn is a staring contest, every card could be a trap, and one false accusation costs you two penalty cards!`),
+  c("Anomia", 800, "mg5w87w/259225fe-354f-405c-91e5-3c54a8fbd9d5.png", `Your brain knows the answer, until your friend shouts it first! In Anomia, matching symbols trigger instant head-to-head category battles where the first person to blurt out an answer steals the card!`),
+  c("Do You Really Know Your Friends?", 650, "s93wSyFN/eebdf339-2539-41d3-9c1d-533a5169fb66.png", `In Do You Really Know Your Friends?, one person takes the hot seat while everyone else writes down what they think you’d say, and the board reveals spark instant roasts and non-stop laughs!`),
+  c("Monopoly Deal Card Game", 650, "4wn0rc67/c38153f7-1a7f-4c7e-ae4e-a1e0048c9c68.png", `Why wait until month-end to stress over rent when you can charge your friends double rent on a Tuesday night? One Sly Deal card and suddenly your bestie’s whole property empire belongs to you!`),
+  c("Name 5", 900, "gFF3TZDY/65cf3597-74de-4bcb-b45b-a0b5ea681037.png", `Easy to learn in 10 seconds, hilarious for hours! From "Name 5 things in a fridge" to "Name 5 songs by Beyoncé", Name 5 brings friends, couples, and family into the chaos instantly.`),
+  c("Little Talk: Conversation Starters for Kids & Families", 1100, "FvsrCH2/5460384f-1a40-41e8-a196-8587c9b399cc.png", `No tablets, no TV, no rushed routines, just genuine laughs and unexpected answers from the little ones. Whether it’s 10 minutes before bed or a Sunday afternoon drive, Little Talk helps kids open up, build confidence, and share what’s really on their minds.`),
+
+  // ---------- BOARD GAMES ----------
+  b("Ubongo 3D", 2100, "xqzm92tV/Ubongo-3-D-Under-Golden-Spotlight.png", `Ubongo! 3D is an exciting 3D puzzle game that challenges players to think fast, solve puzzles and beat the clock! Race to fit colourful 3D pieces into the correct spaces, building your solution to the required height before time runs out. Perfect for family game nights, puzzle lovers and friendly competition!`),
+  b("Connect 4", 1000, "qLFc11fj/99748cae-b3d3-499b-8fcb-ae772950aff3.png", `Connect 4 is the classic two-player strategy game where the goal is to be the first to connect four discs in a row, horizontally, vertically or diagonally! Take turns dropping your coloured discs into the grid, block your opponent’s moves and plan your winning strategy. Simple to learn, exciting to play and perfect for family game nights!`),
+  b("Monopoly Electronic Banking", 7650, "p6svW2Hk/6cd816d6-6eb3-4d3b-ba6e-b7bfea5e0bfe.png", `Paper money is officially cancelled. Swipe, tap, and bankrupt your friends in high definition with Monopoly: Electronic Banking. No more shady bankers stealing from the tray, every transaction is tracked! Ready to build your empire?`),
+  b("Jenga", 850, "1tNFYHnK/c6dddbd1-6b15-421c-aefb-4c00fde9bb63.png", `One wrong move and it’s all over. Jenga turns the simplest task into a heart-pounding thriller, especially when everyone is watching and waiting for you to slip up.`),
+  b("Brains Chess", 1000, "vx3QD6fx/68039ae4-4f81-4abf-81fa-e570df2a1dda.png", `Think you’re a chess grandmaster? Prove it. Brains Chess flips the classic game into an addictive solo logic puzzle, where one wrong move on the board and it’s game over.`),
+  b("Scrabble", 1300, "DDCg235L/e7f2914c-0a7b-4635-9a30-951aa674575e.png", `Spell it. Score it. Own the board. Whether it’s a chill Sunday afternoon or a heated family showdown, Scrabble never misses.`),
+  b("Tapple Family Word Game", 2200, "mC5kY0ws/620fd5b2-3b26-4f83-81df-bb220f16e886.png", `144 categories, 20 letters, and 10 seconds of pure adrenaline! Whether it’s Sunday family dinner, an Airbnb weekend, or a loud house party, Tapple takes 15 seconds to learn and gets everyone shouting across the living room.`),
+  b("2 in 1 Scrabble Original and Monopoly", 1600, "4wNzP1Kv/22922c26-b967-462d-8311-e171aac81ff1.png", `Two timeless classics, one compact box, endless weekend rematches! Whether it’s a quiet Sunday word battle with family or a ruthless late-night property empire showdown, this 2-in-1 Scrabble & Monopoly set is the ultimate game-night staple and a top-tier gift!`),
+  b("Chinese Checkers", 1550, "DDgM2BdY/dcf33ec3-cbca-4173-b2fb-84383fe61f73.png", `Bright marbles, zero screens, and endless rematches! Whether it’s a lazy Sunday afternoon with family or a chill coffee-table showdown with friends, Chinese Checkers brings everyone around the board in seconds.`),
+  b("Dart Board", 1550, "WNRzy3vZ/House-of-Cards-Dartboard-Poster.png", `Instant room upgrade, zero setup hassle, and hours of friendly trash talk! Hang it in your living room, Airbnb, or office break area. Our Dart Board Set comes complete with darts, so you’re ready to throw straight out of the box.`),
+  b("Monopoly Junior Kuromi", 1500, "sJV3Tcgn/915503ad-ef0b-4de9-85dc-29ee0236d9c6.png", `Looking for the ultimate birthday gift or weekend family game? Monopoly Junior: Kuromi Edition is easy for kids ages 5+ to pick up in minutes, with no complicated math, quick 30-minute rounds, and major Kuromi attitude in every roll of the dice!`),
+  b("Monopoly Junior Spider-Man", 1500, "kV7pNbC9/6214d722-7356-43a9-bb3d-c24df3c038e8.png", `Looking for the ultimate birthday gift for a young superhero? Monopoly Junior: Spider-Man Edition takes minutes to learn, keeps kids ages 5+ off screens, and packs big Marvel excitement into quick 30-minute matches the whole family can join!`),
+  b("Monopoly Junior Cars", 1500, "4wbrD2Bk/45fdb520-6889-4143-a416-a6bad00e08be.png", `Ka-chow! Start your engines and race around Radiator Springs! Monopoly Junior: Disney Pixar Cars Edition puts kids in the driver’s seat with custom character tokens Lightning McQueen, Mater, Cruz Ramirez, and Jackson Storm, plus fast, simplified rules made for non-stop racing fun!`),
+  b("Magnetic Checkers Set", 1500, "bMnV14hc/d5e8c088-a462-4b06-b351-464084dc38dc.png", `Compact, sleek, and ready for instant 1-on-1 showdowns! Folds neatly in half to store all magnetic pieces inside; toss it in your backpack for weekend getaways, campus breaks, or chill family nights at home.`),
+  b("Decrypt Rope Game", 1050, "ymv75r5R/b8b689dd-4ac0-444a-ad96-75c131b3bed7.png", `Looks simple until you pull the wrong string and make the knot ten times worse! In Decrypt Rope Game, race to untangle the crisscrossed elastic ropes one clever move at a time, testing your focus, logic, and patience under pressure!`),
+  b("Magnet Battle Chess Game", 1050, "hFNp9Jkf/cfff8553-c6ba-44e8-aaba-77601aefebfd.png", `Think you've got the moves? Put your strategy to the test! Magnet Battle Chess brings an exciting twist to classic chess, combining magnetic pieces, clever tactics, and mind-bending challenges. Perfect for chess lovers, competitive friends, and anyone who loves a good battle of wits!`),
+  b("Monopoly Ultimate Banking", 4500, "Ps8C1PFj/5c9e8cf6-4c4f-4bad-8e9f-03d3e7e521cd.png", `Classic Monopoly upgraded for the contactless era! With Event cards that shake up rent prices instantly and tap-to-pay bank cards that speed up every turn, Monopoly Ultimate Banking keeps family weekends and late-night squad showdowns moving fast from start to bankruptcy.`),
+  b("Table Game Series Football Game", 3500, "Kc8fsMvP/a8cc94e9-dba9-46da-a4a6-97b167a19468.png", `Compact, screen-free, and built for non-stop rematches! Whether you’re settling scores during halftime, keeping football-loving kids entertained all weekend, or upgrading your living room chill zone, this Tabletop Football Game turns any table into a mini pitch.`),
+  b("4 in 1 Chess Set", 1900, "DgzYYg2h/7ce7bfa2-7172-4ce5-bd80-8a1383853993.png", `One compact box, zero screens, and endless weekend rematches! Whether you’re packing for an Airbnb getaway, upgrading your coffee table, or shopping for a timeless gift, this 4-in-1 Chess Set keeps every player at the table entertained from beginner to grandmaster.`),
+  b("Wooden Education Toy Set", 2200, "nNqv6FVp/d5effdfc-754e-40e0-a89e-30339ca7fb3b.png", `Smooth edges, vibrant non-toxic colours, and built to last through years of playtime! Whether it’s a thoughtful birthday gift, a rainy-day playroom staple, or quality parent-child bonding time, this Wooden Educational Toy Set sparks creativity and problem-solving from day one.`),
+  b("Color Ball Challenge", 1200, "whpQtQqs/d40f14d4-45fc-4207-a976-e699232fcab8.png", `Bright colors, zero screens, and instant family competition! Easy enough for kids to grasp in seconds yet packed with sneaky strategy for adults, Color Ball Challenge brings hands-on color-matching fun straight to your weekend living room or birthday gift list.`),
+  b("Sequence", 1500, "J9Q3RQ8/f6ced65b-38b8-4f2b-ab3e-22a538354c3e.png", `Easy enough for beginners, intense enough for serious strategists! Play solo or team up 2-on-2. Sequence blends luck of the draw with pure tactical planning, making it the ultimate crowd-pleaser for family weekends, double dates, and loud house parties.`),
+  b("Sequence Dice Games", 1750, "60QTzYgL/87d5f0b5-4aa0-425a-8acc-cc0e975694bb.png", `Love classic Sequence? Wait until you roll the dice! In Sequence Dice, roll to claim numbers on the board, trigger bonus turns with 2s and 12s, or roll a 10 to remove your opponent’s chip right before they connect five in a row!`),
+
+  // ---------- ADULT GAMES (18+) ----------
+  a("Drunken Tower", 2300, "B2h4q64b/Luxury-Drunken-Tower-Game-Poster.png", `Pull. Play. Drink. Don't let it fall! Get ready for wild challenges, hilarious moments and unforgettable game nights.`),
+  a("Bedroom Commands", 1300, "JWPFLbbr/fe9e1eae-ee93-4797-a3c0-e491743be041.webp", `"What do you want to do tonight?" problem officially solved. Let the cards make the rules with Bedroom Commands. Perfect for anniversaries, staycations, or turning a regular Friday into something wild.`),
+  a("Drunk Stoned Or Stupid", 1300, "hFg20Tkd/e23022bb-685a-4702-8909-b724232fc8ad.png", `Point fingers. Expose your friends. Start the chaos! Find out who’s most likely to do the wildest things. Don't let your next game night be boring!`),
+  a("Risk It or Drink It", 1700, "qLR9KtfN/f7b9d842-dbd6-48f1-9ff9-5be3ddc5a2cd.png", `Take the risk or take a sip! Face outrageous challenges, make bold moves and see who’s brave enough to play. Don't just watch the fun happen!`),
+  a("Do or Drink: Win Or Blackout", 1300, "8gLDdsrm/Do-or-Drink-Play-Drink-Repeat.png", `Dare to do it or take the drink! No excuses. No backing out. Just wild challenges and nonstop chaos!`),
+  a("Do or Drink Expansion Pack 1", 850, "YBtby5nH/80dbd211-7977-441e-943f-0352c294d4ef.png", `Ready to ketchup with your friends and spill the tea? The chaos has officially bean multiplied with Expansion Pack 1. It’s time to stop being so chicken and face the consequences. If you can't take the heat, lettuce tell you, this pack is not for the faint of heart. You’ll be grapeful for an excuse to drink, but this deck is nacho average game night. It’s about to get savage. Best served with a stiff drink.`),
+  a("Buzzed: Battle", 1150, "JRS8WWr4/66de5076-971b-4eb1-aeb2-d32a6fdae56d.png", `The party was getting a little dry, so we decided to add more fuel to the fire. The First Expansion Pack has officially arrived, and it’s time to stop wine-ing and start drinking. This deck is un-beer-lievably savage, packed with brand new rules that will have you foaming at the mouth and making pour decisions all night.`),
+  a("First & Last", 1100, "Q7LF6kM2/1e5b82d4-a6f7-4dc1-b9d8-b8ad41654689.png", `Order matters. Chaos guaranteed. Put your pop culture and historical timeline knowledge to the test with First and Last.`),
+  a("Talk, Flirt, Dare", 1400, "F41JNB4G/9fe178d2-61cc-42ff-a922-0e6a9d618466.webp", `Three decks. One box. Zero awkward silences. From real talk to bold dares, Talk, Flirt, Dare has something for everyone.`),
+  a("Drunk Desires", 1200, "tPmcXnWv/48e7cb2d-fa18-4b7b-869f-912a3435c572.png", `Liquid courage meets zero filter. Drunk Desires turns regular pre-games into legendary nights. Spill your wildest secrets, complete the dare, or drink up.`),
+  a("Do or Drink Expansion Pack #2", 1000, "spngdMSf/3ccc53a4-13a2-4eec-80be-7c83ed602b7b.png", `Thought you survived the original deck? Think again. DO or DRINK Expansion Pack #2 brings 100 fresh ways to expose your friends, ruin reputations, and empty every bottle in the room.`),
+  a("Do or Smoke", 2400, "Z1WSLW9C/12de4ae9-8ad6-4668-a019-be5ebd79efe2.png", `Pass the lighter, pull a card, and pray you don’t get exposed. Do or Smoke is the ultimate chill-session upgrade: complete the wild dare or take a hit, zero skips allowed.`),
+  a("50 Positions of Bondage", 1100, "gXfnT2k/4e053fbc-d697-4b8a-9dc8-18c76f9d8ee4.png", `50 ways to lose control, and love every second of it. Whether you’re a beginner testing the waters or ready to turn date night all the way up, 50 Positions of Bondage takes the guesswork out of getting tied up. Discreet, countrywide delivery.`),
+  a("Spin the Bottle", 2100, "4Zd5XHSS/7347037f-4590-4737-be0b-9e434e870570.png", `Not your high school basement version. Spin the Bottle is all grown up. Give it a flick and let fate decide who’s taking a shot, spilling a secret, or completing a wild dare.`),
+  a("Couple Reconnect", 1100, "WNr5wckK/fa8576db-a701-4147-94d9-41a123e7d723.png", `Whether you’re celebrating an anniversary, planning a weekend staycation, or keeping the spark alive at home, Couple Reconnect takes you beyond small talk into the moments, memories, and desires that matter most.`),
+  a("Drunk In Love X-Rated", 1000, "zWpf22sP/7ebd9fba-2354-4b91-a6d7-97b3039b49e2.png", `Forget boring dinner dates and bring the heat straight to your living room or weekend Airbnb! Whether it’s an anniversary surprise, a staycation essential, or a spicy Friday night at home, Drunk In Love X-Rated guarantees laughs, shots, and serious chemistry.`),
+  a("Our Moments Couples", 800, "jZxgH8sm/951c0e7a-fd92-4a73-ba76-736160da4500.png", `Compact enough to slip into your bag for coffee dates, road trips, and weekend staycations! Our Moments: Couples turn quiet dinners and cosy living-room evenings into hours of laughter, shared memories, and meaningful stories you’ve never told before.`),
+  a("The Ultimate Game For Couples", 950, "bgJZ3d8T/dada84a4-2ba4-447d-9f20-a4cad56ec617.png", `Think you know your partner inside out? Put your relationship to the ultimate test! The Ultimate Game For Couples blends hilarious trivia, playful challenges, and deep conversation prompts that will have you both laughing, debating, and learning brand-new things about each other!`),
+  a("S#!% Happens", 950, "Gf7Q8YJd/4923d5c7-b135-4b4c-b8c7-fd5f8b0e72b6.png", `Zero filter, dark humour, and heated debates over what counts as a true 100/100 disaster! Easy to learn in 60 seconds and guaranteed to have the whole room crying with laughter, Shit Happens is the ultimate icebreaker for Friday night hangouts and weekend Airbnbs.`),
+  a("Truth or Drink", 2550, "vCjfVNR8/bc75c1bf-28d9-4c5d-a5fe-2bf8c6813b62.png", `Four decks of questions ranging from chill icebreakers to "After Dark" chaos! Whether it’s a Friday night pre-game, a couples' night in, or a weekend Airbnb with the squad, Truth or Drink guarantees exposed secrets, loud laughs, and empty glasses.`),
+  a("Never Have I Ever", 2550, "QRM9Y50/b12b90e6-9c36-4ffa-bdac-76ebc51910f8.png", `Zero setup, instant chaos, and stories you’ll be laughing about all year! Packed with hundreds of relatable, savage, and unexpected prompts, Never Have I Ever turns any chill hangout, birthday pre-game, or road trip into an unforgettable confession session.`),
+  a("Love Lingual", 950, "Z1Jr7Q6w/f9048786-f20f-42a0-af78-a625f9504e0b.png", `Whether you’re newly dating, celebrating an anniversary, or planning a cozy weekend staycation, Love Lingual turns any dinner table or living room into a distraction-free zone for real connection. Compact enough for road trips and timeless enough to replay all year!`),
+  a("Truth or Dare For Couples", 800, "FkT8SF0x/198a9f3e-0a19-4682-9f8f-7ebd7f2e59e5.png", `Skip the predictable dinner routine and bring the excitement straight home! Whether it’s an anniversary surprise, a weekend Airbnb getaway, or a Friday night stay-in, Truth or Dare For Couples keeps you both laughing, flirting, and connecting all night long.`),
+  a("Dirty Minds", 1800, "Q7n9nmhK/Gemini-Generated-Image-37g3rs37g3rs37g3.jpg", `The dirtier your mind, the worse you’ll play! Dirty Minds gives you three super suggestive, borderline X-rated clues, only for the real answer to be something totally innocent like a banana, a toothbrush, or a vacuum cleaner!`),
+  a("Buzzed", 950, "8n3rYSnq/2840b373-1eec-4a4f-aef9-6fa67a878e07.png", `Zero setup, no winners or losers, just 180 cards designed to expose your entire friend group one sip at a time! Draw a Buzzed card, read the "Drink if..." prompt out loud, and watch everyone guilty slowly reach for their glass!`),
+  a("Intimacy", 1050, "zVpvWBNg/387db7de-efd8-47c1-96a1-186348dabb08.png", `Real intimacy starts with asking the right questions! The BestSelf Intimacy Deck features 150 thoughtfully crafted prompts across Intimacy, Past, Relationship, About You, Life, and Random, sparking meaningful talks, vulnerability, and stronger connection on every date night.`),
+  a("BestSelf Intimacy", 1050, "4gX7JkLJ/05417c02-534a-4de4-b5ec-1796804cf1ee.png", `Whether you’re newly dating, planning a weekend staycation, or shopping for a thoughtful anniversary or bridal shower gift, the BestSelf Intimacy Deck turns any dinner table or living room into a phone-free zone for genuine closeness.`),
+  a("BestSelf Icebreaker", 1050, "1Jp10PRw/17b60227-1ea2-4cd3-9ca4-0ee650e1c478.png", `Hello unforgettable conversations! The BestSelf Icebreaker Deck packs 150 thought-provoking, funny, and unexpected prompts across Life, Experiences, Random, Would You Rather, Deep, and Personal to spark instant connection at any table!`),
+  a("Let's Fool Around", 1000, "bMQmHsBb/1cb3ddd2-b7d7-4015-9a39-9a59c6a8eaff.png", `Ready to turn up the heat on your next date night? Let’s Fool Around brings bold truths, steamy dares, and playful challenges straight to your bedroom or living room, built to break routines, spark chemistry, and keep you both laughing and blushing all night!`),
+  a("Sexmate", 1300, "ksJG6sV2/62933874-48c1-4a24-88e3-0aa85bbd578d.png", `Ready to take your nights in from routine to unforgettable? Sexmate is the ultimate 18+ couples' card game packed with steamy prompts, bold dares, and sensual challenges designed to unlock new fantasies and crank up the chemistry between you and your partner!`),
+  a("Bad People", 1850, "cSLM40KX/de1be6e4-b370-4f49-b068-64127801a3e3.png", `You finally get to find out what your friends really think of you! In Bad People, one player reads a savage prompt like "Who is most likely to fake their own death to get out of a chama?" and everyone secretly votes on which friend at the table fits it best!`),
+  a("Bad Choices", 1850, "hxTQ0bmZ/Gemini-Generated-Image-tdd0p1tdd0p1tdd0.jpg", `Think Never Have I Ever, except you choose who has to answer and if they say YES, you get closer to winning! In Bad Choices, pick a savage question card from your hand, target the friend you know is guilty, and watch them try to keep a straight face while spilling their wildest secrets!`),
+  a("You Laugh You Drink", 1850, "TqNP5Cw6/6a813a7f-64b1-4e33-aff4-2fa23487b0d1.webp", `In You Laugh You Drink, one player draws a card and has 30 seconds to make everyone else crack up using absurd accents, terrible impressions, and outrageous prompts. Even a tiny smirk costs you a sip!`),
+  a("We're Not Really Strangers", 2850, "spMXyLdR/a0f939d2-9e3f-4b30-b153-7e42f628c191.webp", `Strangers today, unforgettable conversations tomorrow. Get ready to go beyond small talk, ask the questions that matter, uncover hidden truths, and create connections that go deeper than words. Because sometimes, the best way to get closer is to ask one more question.`)
+];
+
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const grid = $("#grid"), qEl = $("#q"), sortEl = $("#sort"), statusEl = $("#status"), emptyEl = $("#empty");
+  const dialog = $("#age");
+  const SUIT = { card: "♠", board: "♦", adult: "♥" };
+  const state = { cat: "all", q: "", sort: "", adult: false };
+
+  try { state.adult = sessionStorage.getItem("hocAdult") === "yes"; } catch (e) {}
+
+  const wa = (text) => "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(text);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const kes = (n) => "Kshs " + Number(n).toLocaleString("en-KE");
+
+  document.querySelectorAll("[data-wa]").forEach((a) => {
+    a.href = wa("Hi House of Cards, I need help with an order.");
     a.target = "_blank"; a.rel = "noopener";
   });
-  document.querySelectorAll("a.order-link").forEach(a => {
-    a.href = waBase + encodeURIComponent("Hi House Of Cards, I need help with an order.");
-    a.target = "_blank"; a.rel = "noopener";
-  });
 
-  const section = document.getElementById("adult-section");
-  const games   = document.getElementById("adult-games");
-  const gate    = document.getElementById("age-gate");
-  const dialog  = document.getElementById("age-dialog");
-  const KEY     = "ageConfirmed";
+  const info = [SITE.delivery && "Delivery: " + SITE.delivery, SITE.payment && "Payment: " + SITE.payment].filter(Boolean);
+  $("#info").textContent = info.join("  ");
+  if (!info.length) $("#info").hidden = true;
 
-  function unlock() {
-    section.classList.remove("locked");
-    games.removeAttribute("inert");
-    gate.hidden = true;
+  // Picture stages: "photo" (your real photo) -> "pl" (poster in images folder) -> "pr" (poster on ImgBB)
+  function card(p) {
+    const meta = [p.players && p.players + " players", p.age && "Age " + p.age].filter(Boolean).join(" · ");
+    const photos = !!SITE.usePhotos;
+    return '<article class="card" data-cat="' + p.cat + '">' +
+      '<div class="corner"><span class="pip">' + SUIT[p.cat] + '</span><span class="price">' + kes(p.price) + '</span></div>' +
+      '<div class="gal" data-photo="' + esc(p.photo) + '" data-pl="' + esc(p.posterLocal) + '" data-pr="' + esc(p.img) + '">' +
+      '<img src="' + esc(photos ? p.photo : p.img) + '" data-stage="' + (photos ? "photo" : "pr") + '" alt="' + esc(p.name) + '" width="400" height="400" loading="lazy">' +
+      (photos ? '<div class="tabs" hidden><button type="button" class="tab on" data-show="photo">Box photo</button><button type="button" class="tab" data-show="poster">Poster</button></div>' : "") +
+      '</div>' +
+      '<div class="body"><h3>' + esc(p.name) + '</h3>' +
+      (meta ? '<p class="meta">' + esc(meta) + '</p>' : "") +
+      '<p class="desc">' + esc(p.desc || "") + '</p>' +
+      '<button class="more" type="button" aria-expanded="false">Read more</button>' +
+      '<a class="btn" target="_blank" rel="noopener" href="' + wa("Hi House of Cards, I would like to order: " + p.name) + '">Order ' + esc(p.name) + '</a></div></article>';
   }
 
-  try { if (sessionStorage.getItem(KEY) === "yes") unlock(); } catch (e) {}
+  function render() {
+    const q = state.q.trim().toLowerCase();
+    let list = PRODUCTS.filter((p) => {
+      if (p.cat === "adult" && !state.adult) return false;
+      if (state.cat !== "all" && p.cat !== state.cat) return false;
+      return !q || (p.name + " " + (p.desc || "")).toLowerCase().includes(q);
+    });
+    if (state.sort) list = list.slice().sort((a, b) => (state.sort === "asc" ? a.price - b.price : b.price - a.price));
+    grid.innerHTML = list.map(card).join("");
+    emptyEl.hidden = list.length > 0;
+    statusEl.textContent = list.length + (list.length === 1 ? " game" : " games");
+  }
 
-  document.getElementById("open-confirm").addEventListener("click", () => dialog.showModal());
-  document.getElementById("confirm-yes").addEventListener("click", () => {
-    try { sessionStorage.setItem(KEY, "yes"); } catch (e) {}
-    unlock();
+  document.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.cat === "adult" && !state.adult) { dialog.showModal(); return; }
+    state.cat = b.dataset.cat;
+    document.querySelectorAll(".chip").forEach((c) => {
+      const on = c === b; c.classList.toggle("on", on); c.setAttribute("aria-pressed", on);
+    });
+    render();
+  }));
+
+  qEl.addEventListener("input", () => { state.q = qEl.value; render(); });
+  sortEl.addEventListener("change", () => { state.sort = sortEl.value; render(); });
+
+  grid.addEventListener("click", (e) => {
+    const t = e.target.closest(".tab");
+    if (t) {                                   // switch between box photo and poster
+      const g = t.closest(".gal"), im = g.querySelector("img");
+      g.querySelectorAll(".tab").forEach((x) => x.classList.toggle("on", x === t));
+      if (t.dataset.show === "photo") { im.dataset.stage = "photo"; im.src = g.dataset.photo; }
+      else { im.dataset.stage = "pl"; im.src = g.dataset.pl; }
+      return;
+    }
+    const b = e.target.closest(".more"); if (!b) return;
+    const open = b.closest(".card").classList.toggle("open");
+    b.textContent = open ? "Show less" : "Read more";
+    b.setAttribute("aria-expanded", open);
+  });
+
+  // Your real photo loaded -> a second picture exists, so show the switch
+  grid.addEventListener("load", (e) => {
+    const im = e.target; if (im.tagName !== "IMG" || im.dataset.stage !== "photo") return;
+    const g = im.closest(".gal"), tabs = g.querySelector(".tabs");
+    if (tabs && !g.dataset.noposter) tabs.hidden = false;
+  }, true);
+
+  // A picture is missing -> try the next one, and only show the symbol as a last resort
+  grid.addEventListener("error", (e) => {
+    const im = e.target; if (im.tagName !== "IMG") return;
+    const g = im.closest(".gal"), st = im.dataset.stage;
+    if (st === "photo") { im.dataset.stage = "pl"; im.src = g.dataset.pl; return; }
+    if (st === "pl") { im.dataset.stage = "pr"; im.src = g.dataset.pr; return; }
+    const tabs = g.querySelector(".tabs");
+    if (tabs && !tabs.hidden) {                // poster failed but the photo works: go back to it
+      g.dataset.noposter = "1"; tabs.hidden = true;
+      im.dataset.stage = "photo"; im.src = g.dataset.photo; return;
+    }
+    const d = document.createElement("div"); d.className = "noimg";
+    d.textContent = SUIT[g.closest(".card").dataset.cat]; g.replaceWith(d);
+  }, true);
+
+  $("#yes").addEventListener("click", () => {
+    state.adult = true;
+    try { sessionStorage.setItem("hocAdult", "yes"); } catch (e) {}
     dialog.close();
+    document.querySelector('.chip[data-cat="adult"]').click();
   });
-  document.getElementById("confirm-no").addEventListener("click", () => dialog.close());
+  $("#no").addEventListener("click", () => dialog.close());
 
-  // ===== Search =====
-  const searchToggle = document.getElementById("search-toggle");
-  const searchPanel  = document.getElementById("search-panel");
-  const searchInput  = document.getElementById("search-input");
-  const searchClear  = document.getElementById("search-clear");
-  const searchStatus = document.getElementById("search-status");
-  const allItems     = document.querySelectorAll(".item");
-  const allSections  = document.querySelectorAll(".category");
+  render();
+})();
 
-  function runSearch() {
-    const q = searchInput.value.trim().toLowerCase();
-    const adultLocked = section.classList.contains("locked");
-    let shown = 0;
-
-    allItems.forEach(item => {
-      const inAdult = item.closest("#adult-section");
-      const text = (item.querySelector("h3").textContent + " " +
-                    item.querySelector(".desc").textContent).toLowerCase();
-      // adult games stay out of the results until the visitor confirms 18+
-      const match = !q || (text.includes(q) && !(inAdult && adultLocked));
-      item.hidden = !match;
-      if (match && q) shown++;
-    });
-
-    allSections.forEach(cat => {
-      const visible = cat.querySelectorAll(".item:not([hidden])").length;
-      cat.classList.toggle("no-results", q !== "" && visible === 0);
-    });
-
-    if (!q) searchStatus.textContent = "";
-    else if (shown === 0) searchStatus.textContent = "No games found. Try another name, or ask us on WhatsApp.";
-    else searchStatus.textContent = shown + (shown === 1 ? " game found" : " games found");
-  }
-
-  function closeSearch() {
-    searchInput.value = "";
-    runSearch();
-    searchPanel.hidden = true;
-    searchToggle.setAttribute("aria-expanded", "false");
-    searchToggle.focus();
-  }
-
-  searchToggle.addEventListener("click", () => {
-    if (searchPanel.hidden) {
-      searchPanel.hidden = false;
-      searchToggle.setAttribute("aria-expanded", "true");
-      searchInput.focus();
-    } else {
-      closeSearch();
-    }
-  });
-
-  searchInput.addEventListener("input", runSearch);
-  searchInput.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeSearch();
-    if (e.key === "Enter") {
-      const first = document.querySelector(".item:not([hidden])");
-      if (first && searchInput.value.trim()) first.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  });
-  searchClear.addEventListener("click", () => { searchInput.value = ""; runSearch(); searchInput.focus(); });
 </script>
+</body>
+</html>
