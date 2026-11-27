@@ -236,7 +236,7 @@ const SITE = {
 // c = card game, b = board game, a = adult (18+). Arguments: name, price, image, description
 // Image: a bare file name (uuid.webp) is read from the "20HOC" folder next to this file.
 // An image containing a "/" (like "abc123/photo.png") is loaded from ImgBB.
-const img = (u) => /^(https?:)?\/\//.test(u) ? u : u.includes("/") ? "https://i.ibb.co/" + u : "20HOC/" + u;
+const img = (u) => /^(https?:)?\/\//.test(u) ? u : u.startsWith("20HOC/") ? u : u.includes("/") ? "https://i.ibb.co/" + u : "20HOC/" + u;
 const mk = (cat) => (name, price, file, desc) => ({ cat, name, price, img: img(file), desc });
 const c = mk("card"), b = mk("board"), a = mk("adult");
 
